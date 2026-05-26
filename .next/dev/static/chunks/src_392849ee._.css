@@ -1,0 +1,238 @@
+/* [project]/src/app/genesis/genesis.css [app-client] (css) */
+.genesis-hero {
+  width: 100%;
+  height: 125svh;
+  position: relative;
+  overflow: hidden;
+}
+
+.genesis-hero .gen-hero-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.genesis-hero .container {
+  color: var(--base-100);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 2.125rem;
+  display: flex;
+  position: relative;
+}
+
+.genesis-hero .container .gen-hero-copy:first-child {
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+}
+
+.genesis-hero .container .gen-hero-copy p {
+  color: var(--base-400);
+}
+
+.genesis-hero .container .gen-hero-copy:nth-child(3) {
+  flex-direction: column;
+  gap: 4rem;
+  display: flex;
+}
+
+.genesis-hero .container .gen-hero-copy:nth-child(3) h1 {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.genesis-hero .container .gen-hero-copy:nth-child(3) .gen-hero-meta {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.genesis-about {
+  background-color: var(--base-100);
+  padding: 8rem 0;
+  position: relative;
+}
+
+.genesis-about .container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  display: flex;
+}
+
+.genesis-about .container .genesis-about-logo {
+  width: 8rem;
+  height: 8rem;
+}
+
+.genesis-about .container .genesis-about-copy {
+  text-align: center;
+  flex-direction: column;
+  width: 60%;
+  display: flex;
+}
+
+.genesis-about .container .genesis-about-copy h4 {
+  margin-bottom: 2rem;
+}
+
+.project-preview {
+  background-color: var(--base-400);
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.project-preview .project-preview-wrapper {
+  gap: 4em;
+  width: 160%;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)scale(1);
+}
+
+.project-preview .project-preview-wrapper .preview-col {
+  flex-direction: column;
+  flex: 1;
+  gap: 4em;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.project-preview .project-preview-wrapper .preview-img {
+  border-radius: .75rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+.project-preview .project-preview-wrapper .preview-img.main-preview-img img {
+  position: relative;
+  transform: scale(2);
+}
+
+.project-page-whitespace {
+  width: 100%;
+  height: 600vh;
+}
+
+@media (max-width: 1000px) {
+  .genesis-hero .container .gen-hero-copy:nth-child(3) h1, .genesis-about .container .genesis-about-copy {
+    width: 100%;
+  }
+
+  .genesis-hero .container {
+    padding: 10rem 1.5rem;
+  }
+
+  .project-preview .project-preview-wrapper {
+    width: 250%;
+  }
+}
+
+/* [project]/src/components/Copy/Copy.css [app-client] (css) */
+.line {
+  will-change: transform;
+  position: relative;
+  transform: translateY(100%);
+}
+
+/* [project]/src/components/TextBlock/TextBlock.css [app-client] (css) */
+.text-block {
+  background-color: var(--base-700);
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  color: var(--base-100);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.text-block p {
+  color: var(--base-100);
+}
+
+.text-block .container {
+  padding: 3rem;
+  display: flex;
+}
+
+.text-block .container .text-block-col {
+  flex: 1;
+}
+
+.text-block .container .text-block-col:first-child {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15rem;
+  display: flex;
+}
+
+.text-block .container .text-block-col:nth-child(2) {
+  align-items: flex-end;
+  gap: 2rem;
+  display: flex;
+}
+
+.text-block .container .text-block-logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.text-block .container .text-block-logo svg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.text-block .container .text-block-col:nth-child(2) p {
+  color: var(--base-400);
+}
+
+.text-block .container .text-block-copy {
+  flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .text-block {
+    height: 750px;
+  }
+
+  .text-block .container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .text-block .container .text-block-copy {
+    flex: none;
+  }
+
+  .text-block .container .text-block-col:first-child {
+    flex-direction: column-reverse;
+  }
+
+  .text-block .container .text-block-col:nth-child(2) {
+    display: inline-block;
+  }
+
+  .text-block .container .text-block-col:nth-child(2) p {
+    margin-bottom: 1rem;
+  }
+}
+
+/*# sourceMappingURL=src_392849ee._.css.map*/

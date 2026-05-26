@@ -1,0 +1,39 @@
+/* [next]/internal/font/google/koulen_28999a45.module.css [app-client] (css) */
+@font-face {
+  font-family: Koulen;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../media/19e744b53a386fd6-s.16769523.woff2") format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}
+
+@font-face {
+  font-family: Koulen;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../media/6c6a3def8289aaff-s.p.99c718a3.woff2") format("woff2");
+  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: Koulen Fallback;
+  src: local(Arial);
+  ascent-override: 137.09%;
+  descent-override: 65.8%;
+  line-gap-override: 0.0%;
+  size-adjust: 89.05%;
+}
+
+.koulen_28999a45-module__2Ll8qa__className {
+  font-family: Koulen, Koulen Fallback;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.koulen_28999a45-module__2Ll8qa__variable {
+  --font-koulen: "Koulen", "Koulen Fallback";
+}
+
+/*# sourceMappingURL=%5Bnext%5D_internal_font_google_koulen_28999a45_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,60 @@
+/* [project]/src/components/Product/Product.css [app-client] (css) */
+.product {
+  transform-origin: center;
+  will-change: transform, opacity;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+.product .product-img {
+  background-color: var(--base-200);
+  border-radius: .75rem .75rem 0 0;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+}
+
+.product .product-img img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.product .product-info {
+  background-color: var(--base-200);
+  border-radius: 0 0 .75rem .75rem;
+  padding: 0 1rem 1rem;
+}
+
+.product .product-info-wrapper {
+  justify-content: space-between;
+  width: 100%;
+  padding: .5rem;
+  display: flex;
+}
+
+.product .product-info .add-to-cart-btn {
+  background-color: var(--base-700);
+  width: 100%;
+  color: var(--base-100);
+  cursor: pointer;
+  font-size: clamp(.75rem, .9vw, .8rem);
+  font-family: var(--font-dm-mono), monospace;
+  text-transform: uppercase;
+  border: none;
+  border-radius: .5rem;
+  margin-top: .5rem;
+  padding: .75rem;
+  font-weight: 500;
+  transition: transform .2s;
+}
+
+.product .product-info .add-to-cart-btn:active {
+  transform: scale(.95);
+}
+
+/*# sourceMappingURL=src_components_Product_Product_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,104 @@
+/* [project]/src/components/CTA/CTA.css [app-client] (css) */
+.cta {
+  width: 100%;
+  height: 100%;
+  padding: 8rem 0;
+  position: relative;
+}
+
+.cta .container {
+  gap: 2rem;
+  display: flex;
+}
+
+.cta .container .cta-col:first-child, .cta .container .cta-col:nth-child(3) {
+  flex: 1;
+}
+
+.cta .container .cta-col:nth-child(2) {
+  flex-direction: column;
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.cta .container .cta-col:nth-child(2) .cta-header {
+  text-align: center;
+  width: 50%;
+}
+
+.cta .container .cta-col:nth-child(2) .cta-main-img {
+  aspect-ratio: 4 / 5;
+  z-index: -1;
+  border-radius: .75rem;
+  width: 100%;
+  height: 100%;
+  margin-top: -4rem;
+  overflow: hidden;
+}
+
+.cta .container .cta-col:first-child {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.cta .container .cta-col:first-child p {
+  color: var(--base-500);
+}
+
+.cta .container .cta-col:first-child .cta-side-img {
+  will-change: transform;
+  border-radius: .75rem;
+  height: 20rem;
+  overflow: hidden;
+  transform: translateY(20rem);
+}
+
+.cta .container .cta-col:nth-child(3) {
+  align-items: flex-end;
+  display: flex;
+}
+
+.cta .container .cta-col:nth-child(3) .cta-side-img {
+  will-change: transform;
+  border-radius: .75rem;
+  height: 20rem;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.cta .container:nth-child(2) {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cta .container:nth-child(2) .cta-main-copy {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .cta .container .cta-col:nth-child(2) .cta-header {
+    width: 90%;
+  }
+
+  .cta .container .cta-col:first-child p, .cta .container .cta-col:first-child, .cta .container .cta-col:nth-child(3) {
+    display: none;
+  }
+
+  .cta .container .cta-col:nth-child(2) .cta-main-img, .cta .container:nth-child(2) .cta-main-copy {
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=src_components_CTA_CTA_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,143 @@
+/* [project]/src/app/wardrobe/wardrobe.css [app-client] (css) */
+.products-header {
+  width: 100%;
+  height: 100%;
+  padding-top: 25svh;
+  position: relative;
+  overflow: hidden;
+}
+
+.products-header .container {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 2rem;
+  display: flex;
+}
+
+.products-header h1 {
+  width: 50%;
+}
+
+.products-header .products-header-divider {
+  background-color: var(--base-200);
+  width: 100%;
+  height: .125rem;
+}
+
+.products-header .product-filter-bar {
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+}
+
+.products-header .product-filter-bar p {
+  font-weight: 500;
+}
+
+.products-header .product-filter-bar > div {
+  flex: 1;
+  display: flex;
+}
+
+.products-header .filter-bar-tags {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products-header .filter-bar-tags p {
+  color: var(--base-400);
+  cursor: pointer;
+}
+
+.products-header .filter-bar-tags p.active {
+  color: var(--base-700);
+}
+
+.products-header .filter-bar-colors {
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.products-header .filter-bar-colors span {
+  border: .0625rem solid var(--base-200);
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+.products-header .filter-bar-colors span.black {
+  background-color: #121212;
+}
+
+.products-header .filter-bar-colors span.stone {
+  background-color: #a49e91;
+}
+
+.products-header .filter-bar-colors span.ice {
+  background-color: #bfc4cb;
+}
+
+.products-header .filter-bar-colors span.grey {
+  background-color: #686868;
+}
+
+.products-header .filter-bar-colors span.white {
+  background-color: #fff;
+}
+
+.products-header .filter-bar-colors span.active {
+  border: .125rem dashed var(--base-700);
+}
+
+.product-list {
+  width: 100%;
+  padding: 2rem 0 4rem;
+}
+
+.product-list .container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .product-list .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .products-header .container {
+    text-align: center;
+    align-items: center;
+  }
+
+  .products-header h1 {
+    width: 100%;
+  }
+
+  .product-list .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-header .product-filter-bar {
+    flex-direction: column;
+  }
+
+  .products-header .filter-bar-header {
+    display: none !important;
+  }
+
+  .products-header .filter-bar-tags, .products-header .filter-bar-colors {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-list .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=src_app_wardrobe_wardrobe_css_bad6b30c._.single.css.map*/

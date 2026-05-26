@@ -1,0 +1,17 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/src/app/genesis/page": [
+      "static/media/6c6a3def8289aaff-s.p.99c718a3.woff2",
+      "static/media/3a11180d498b75c0-s.p.cb76a30f.woff2",
+      "static/media/475197ef9cf73ba9-s.p.035d6fd3.woff2",
+      "static/media/bdef460321aa07a0-s.p.c4530df2.woff2",
+      "static/media/f9fc8f485db6b190-s.p.01f2a084.woff2",
+      "static/media/7546fe8f902b88b8-s.p.5f7c9333.woff2",
+      "static/media/36363bfb06833f56-s.p.d8302362.woff2",
+      "static/media/a73419dd2ba2d841-s.p.f2813c2a.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}
