@@ -20,6 +20,15 @@
 body {
   background-color: var(--base-100);
   color: var(--base-700);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
 }
 
 img,
