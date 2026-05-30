@@ -27,6 +27,7 @@ const Orb = ({
     let mounted = true;
     let animationId = null;
     const meshes = [];
+    let isDragging = false;
 
     const scene = new THREE.Scene();
     const orbGroup = new THREE.Group();
@@ -65,10 +66,18 @@ const Orb = ({
     controls.enableZoom = true;
     controls.enablePan = false;
 
+    const onDragStart = () => { isDragging = true; };
+    const onDragEnd = () => { isDragging = false; };
+    renderer.domElement.addEventListener("mousedown", onDragStart);
+    renderer.domElement.addEventListener("touchstart", onDragStart, { passive: true });
+    window.addEventListener("mouseup", onDragEnd);
+    window.addEventListener("touchend", onDragEnd);
+
     const animate = () => {
       if (!mounted) return;
       animationId = requestAnimationFrame(animate);
       controls.update();
+      if (!isDragging) orbGroup.rotation.y += 0.003;
       renderer.render(scene, camera);
     };
 
@@ -159,10 +168,7 @@ const Orb = ({
           }
         },
         undefined,
-        (error) => {
-          if (mounted) {
-          }
-        }
+        () => {}
       );
     };
 
@@ -191,6 +197,10 @@ const Orb = ({
       }
 
       window.removeEventListener("resize", handleResize);
+      renderer.domElement.removeEventListener("mousedown", onDragStart);
+      renderer.domElement.removeEventListener("touchstart", onDragStart);
+      window.removeEventListener("mouseup", onDragEnd);
+      window.removeEventListener("touchend", onDragEnd);
 
       meshes.forEach(({ mesh, geometry, material, texture }) => {
         if (mesh.parent) {

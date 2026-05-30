@@ -20,6 +20,7 @@
 .product .product-img img {
   width: 100%;
   height: auto;
+  aspect-ratio: 600 / 1165;
   object-fit: cover;
 }
 
