@@ -11,6 +11,10 @@ export default function ClientLayout({ children, footer }) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    window.__appStarted = true;
+  }, []);
+
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 1000);
     };

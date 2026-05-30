@@ -1,7 +1,6 @@
 "use client";
 import "./Product.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { useCartStore } from "@/store/cartStore";
 
@@ -14,17 +13,10 @@ const Product = ({
   style,
 }) => {
   const addToCart = useCartStore((state) => state.addToCart);
-  const pathname = usePathname();
-
-  const handleImageClick = () => {
-    if (pathname === "/unit") {
-      window.dispatchEvent(new CustomEvent("scrollToTop"));
-    }
-  };
 
   return (
     <div className={`product ${className}`} ref={innerRef} style={style}>
-      <Link href="/unit" className="product-img" onClick={handleImageClick}>
+      <Link href={`/product/${product.slug}`} className="product-img">
         <img src={`/products/product_${productIndex}.png`} alt={product.name} />
       </Link>
       <div className="product-info">

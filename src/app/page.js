@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 import { products } from "./wardrobe/products";
-import Preloader, { isInitialLoad } from "@/components/Preloader/Preloader";
+import Preloader from "@/components/Preloader/Preloader";
 import DotMatrix from "@/components/DotMatrix/DotMatrix";
 import BrandIcon from "@/components/BrandIcon/BrandIcon";
 import MarqueeBanner from "@/components/MarqueeBanner/MarqueeBanner";
@@ -22,15 +22,15 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Index() {
-  const [loaderAnimating, setLoaderAnimating] = useState(isInitialLoad);
+  // Computed once on mount — no state, no re-renders, no double useGSAP run
+  const isInitialLoad = useRef(
+    typeof window === "undefined" || !window.__appStarted
+  );
+
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const heroImgRef = useRef(null);
   const heroHeaderRef = useRef(null);
   const heroSectionRef = useRef(null);
-
-  const handlePreloaderComplete = () => {
-    setLoaderAnimating(false);
-  };
 
   useEffect(() => {
     const shuffled = [...products].sort(() => 0.5 - Math.random());
@@ -45,7 +45,7 @@ export default function Index() {
       y: 0,
       duration: 0.75,
       ease: "power3.out",
-      delay: isInitialLoad ? 5.75 : 1,
+      delay: isInitialLoad.current ? 5.75 : 1,
     });
 
     gsap.to(heroHeaderRef.current, {
@@ -62,7 +62,7 @@ export default function Index() {
 
   return (
     <>
-      <Preloader onAnimationComplete={handlePreloaderComplete} />
+      <Preloader />
 
       <section className="hero" ref={heroSectionRef}>
         <DotMatrix
@@ -70,11 +70,11 @@ export default function Index() {
           dotSize={2}
           spacing={5}
           opacity={0.9}
-          delay={isInitialLoad ? 6 : 1.125}
+          delay={isInitialLoad.current ? 6 : 1.125}
         />
         <div className="container">
           <div className="hero-header" ref={heroHeaderRef}>
-            <Copy animateOnScroll={false} delay={isInitialLoad ? 5.5 : 0.65}>
+            <Copy animateOnScroll={false} delay={isInitialLoad.current ? 5.5 : 0.65}>
               <h1>Silhouettes for the Next Era</h1>
             </Copy>
           </div>
@@ -85,14 +85,14 @@ export default function Index() {
         <div className="section-footer">
           <Copy
             type="flicker"
-            delay={isInitialLoad ? 7.5 : 0.65}
+            delay={isInitialLoad.current ? 7.5 : 0.65}
             animateOnScroll={false}
           >
             <p>Void Index</p>
           </Copy>
           <Copy
             type="flicker"
-            delay={isInitialLoad ? 7.5 : 0.65}
+            delay={isInitialLoad.current ? 7.5 : 0.65}
             animateOnScroll={false}
           >
             <p>Model v.23</p>

@@ -1,3 +1,4 @@
+"use client";
 import "./lookbook.css";
 
 import Orb from "@/components/Orb/Orb";

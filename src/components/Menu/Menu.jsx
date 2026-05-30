@@ -296,7 +296,9 @@ const Menu = () => {
   return (
     <nav className="menu" ref={menuRef}>
       <div className="menu-header" onClick={toggleMenu}>
-        <h4 className="menu-logo">R Commerce</h4>
+        <Link href="/" onClick={(e) => e.stopPropagation()}>
+          <h4 className="menu-logo">R Commerce</h4>
+        </Link>
         <button className="menu-toggle" aria-label="Toggle menu">
           <div className="menu-hamburger-icon" ref={hamburgerRef}>
             <span className="menu-item"></span>
@@ -347,9 +349,6 @@ const Menu = () => {
                 <Link href="/touchpoint" onClick={handleLinkClick}>
                   Touchpoint
                 </Link>
-                <Link href="/unit" onClick={handleLinkClick}>
-                  Shell (A)
-                </Link>
               </div>
             </div>
             <div className="menu-overlay-sub-col">
@@ -357,17 +356,17 @@ const Menu = () => {
                 <p>Field Tests</p>
               </div>
               <div className="menu-sub-links menu-product-links">
-                <Link href="/product" onClick={handleLinkClick}>
-                  01. Unbody
+                <Link href="/product/essentials" onClick={handleLinkClick}>
+                  01. Essentials
                 </Link>
-                <Link href="/product" onClick={handleLinkClick}>
-                  02. Persona Null
+                <Link href="/product/streetwear" onClick={handleLinkClick}>
+                  02. Streetwear
                 </Link>
-                <Link href="/product" onClick={handleLinkClick}>
-                  03. Second Host
+                <Link href="/product/outerwear" onClick={handleLinkClick}>
+                  03. Outerwear
                 </Link>
-                <Link href="/product" onClick={handleLinkClick}>
-                  04. Shellcode
+                <Link href="/product/accessories" onClick={handleLinkClick}>
+                  04. Accessories
                 </Link>
               </div>
             </div>

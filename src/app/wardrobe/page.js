@@ -9,20 +9,20 @@ import Copy from "@/components/Copy/Copy";
 import { gsap } from "gsap";
 
 export default function Wardrobe() {
-  const [activeTag, setActiveTag] = useState("All");
-  const [activeColor, setActiveColor] = useState(null);
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [activeTag, setActiveTag] = useState("Essentials");
+  const [filteredProducts, setFilteredProducts] = useState(
+    products.filter((p) => p.tag === "Essentials")
+  );
   const [isAnimating, setIsAnimating] = useState(false);
   const productRefs = useRef([]);
   const isInitialMount = useRef(true);
 
-  const handleFilterChange = (newTag, newColor) => {
+  const handleFilterChange = (newTag) => {
     if (isAnimating) return;
-    if (newTag === activeTag && newColor === activeColor) return;
+    if (newTag === activeTag) return;
 
     setIsAnimating(true);
     setActiveTag(newTag);
-    setActiveColor(newColor);
 
     gsap.killTweensOf(productRefs.current);
 
@@ -33,13 +33,7 @@ export default function Wardrobe() {
       stagger: 0.05,
       ease: "power3.out",
       onComplete: () => {
-        const filtered = products.filter((product) => {
-          if (newTag !== "All" && product.tag !== newTag) return false;
-          if (newColor && product.color !== newColor) return false;
-          return true;
-        });
-
-        setFilteredProducts(filtered);
+        setFilteredProducts(products.filter((p) => p.tag === newTag));
       },
     });
   };
@@ -74,35 +68,15 @@ export default function Wardrobe() {
           </Copy>
           <div className="products-header-divider"></div>
           <div className="product-filter-bar">
-            <div className="filter-bar-header">
-              <p className="bodyCopy">Filters</p>
-            </div>
             <div className="filter-bar-tags">
-              {["All", "Sheerform", "Functionary", "Deform"].map((tag) => (
+              {["Essentials", "Streetwear", "Outerwear", "Accessories"].map((tag) => (
                 <p
                   key={tag}
                   className={`bodyCopy ${activeTag === tag ? "active" : ""}`}
-                  onClick={() => handleFilterChange(tag, activeColor)}
+                  onClick={() => handleFilterChange(tag)}
                 >
                   {tag}
                 </p>
-              ))}
-            </div>
-            <div className="filter-bar-colors">
-              {["Black", "Stone", "Ice", "Grey", "White"].map((color) => (
-                <span
-                  key={color}
-                  className={`color-selector ${color.toLowerCase()} ${
-                    activeColor === color ? "active" : ""
-                  }`}
-                  onClick={() =>
-                    handleFilterChange(
-                      activeTag,
-                      activeColor === color ? null : color
-                    )
-                  }
-                  style={{ cursor: isAnimating ? "not-allowed" : "pointer" }}
-                ></span>
               ))}
             </div>
           </div>

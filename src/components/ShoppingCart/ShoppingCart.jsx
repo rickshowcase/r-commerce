@@ -76,7 +76,7 @@ const ShoppingCart = () => {
                   products.findIndex((p) => p.name === item.name) + 1;
                 const quantity = Number(item.quantity) || 1;
                 return (
-                  <div key={`${item.name}-${index}`} className="cart-item">
+                  <div key={item.cartId || `${item.name}-${index}`} className="cart-item">
                     <div className="cart-item-image">
                       <img
                         src={`/products/product_${productIndex}.png`}
@@ -90,10 +90,13 @@ const ShoppingCart = () => {
                           <span className="cart-item-quantity">{quantity}</span>
                         )}
                       </div>
+                      {item.selectedColor && item.selectedSize && (
+                        <p className="cart-item-meta">{item.selectedColor} / {item.selectedSize}</p>
+                      )}
                       <p className="cart-item-price">${item.price}</p>
                       <button
                         className="cart-item-remove"
-                        onClick={() => removeFromCart(item.name)}
+                        onClick={() => removeFromCart(item.cartId)}
                       >
                         Remove
                       </button>

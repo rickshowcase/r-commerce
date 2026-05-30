@@ -1,6 +1,6 @@
 "use client";
 import "./Preloader.css";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import { useLenis } from "lenis/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
@@ -8,18 +8,18 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(SplitText);
 
-let isInitialLoad = true;
-
 const Preloader = () => {
-  const [showPreloader, setShowPreloader] = useState(isInitialLoad);
-  const [loaderAnimating, setLoaderAnimating] = useState(isInitialLoad);
+  const [showPreloader, setShowPreloader] = useState(true);
+  const [loaderAnimating, setLoaderAnimating] = useState(true);
   const wrapperRef = useRef(null);
   const lenis = useLenis();
 
-  useEffect(() => {
-    return () => {
-      isInitialLoad = false;
-    };
+  // useLayoutEffect runs before paint — no visible flash when skipping
+  useLayoutEffect(() => {
+    if (window.__appStarted) {
+      setShowPreloader(false);
+      setLoaderAnimating(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -137,5 +137,4 @@ const Preloader = () => {
   );
 };
 
-export { isInitialLoad };
 export default Preloader;

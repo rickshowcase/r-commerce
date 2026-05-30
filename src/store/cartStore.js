@@ -1,37 +1,30 @@
 import { create } from "zustand";
 
-export const useCartStore = create((set, get) => ({
+export const useCartStore = create((set) => ({
   cartItems: [],
 
   addToCart: (product) => {
+    const cartId = `${product.slug}-${product.selectedColor || ""}-${product.selectedSize || ""}`;
     set((state) => {
-      const existingItem = state.cartItems.find(
-        (item) => item.name === product.name
-      );
+      const existingItem = state.cartItems.find((item) => item.cartId === cartId);
       if (existingItem) {
-        const updatedItems = state.cartItems.map((item) => {
-          if (item.name === product.name) {
-            const currentQuantity = Number(item.quantity) || 1;
-            const newQuantity = currentQuantity + 1;
-
-            return { ...item, quantity: newQuantity };
-          }
-          return item;
-        });
-        return { cartItems: updatedItems };
+        return {
+          cartItems: state.cartItems.map((item) =>
+            item.cartId === cartId
+              ? { ...item, quantity: (Number(item.quantity) || 1) + 1 }
+              : item
+          ),
+        };
       }
-
-      const newItem = { ...product, quantity: 1 };
-
       return {
-        cartItems: [...state.cartItems, newItem],
+        cartItems: [...state.cartItems, { ...product, cartId, quantity: 1 }],
       };
     });
   },
 
-  removeFromCart: (productName) => {
+  removeFromCart: (cartId) => {
     set((state) => ({
-      cartItems: state.cartItems.filter((item) => item.name !== productName),
+      cartItems: state.cartItems.filter((item) => item.cartId !== cartId),
     }));
   },
 }));

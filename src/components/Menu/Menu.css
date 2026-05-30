@@ -116,11 +116,16 @@
   gap: 2rem;
 }
 
-.menu .menu-overlay-col-sm .menu-main-link {
+.menu .menu-main-links {
   display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.menu .menu-overlay-col-sm .menu-main-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 70%;
+  width: fit-content;
   color: var(--base-100);
 }
 

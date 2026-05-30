@@ -195,6 +195,14 @@
   text-transform: uppercase;
 }
 
+.shopping-cart-container .cart-item-meta {
+  color: var(--base-400);
+  margin: 0;
+  font-size: clamp(0.7rem, 0.85vw, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .shopping-cart-container .cart-item-price {
   color: var(--base-100);
   margin: 0;
@@ -210,8 +218,9 @@
   font-weight: 500;
   font-size: clamp(0.75rem, 0.9vw, 0.8rem);
   text-transform: uppercase;
-  margin-top: 0.5rem;
-  text-align: left;
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: auto;
   transition: opacity 0.2s ease;
   transform: none;
   -webkit-transform: none;

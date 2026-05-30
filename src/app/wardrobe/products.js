@@ -1,272 +1,209 @@
 export const products = [
+  // Essentials
   {
-    name: "Unit 01",
-    price: "180",
-    color: "Black",
-    tag: "Deform",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "A modular black outer shell engineered with rigid layering and precision cuts—ideal for urban climates, built to disappear in low light.",
-  },
-  {
-    name: "Phase Field",
-    price: "160",
-    color: "Stone",
-    tag: "Sheerform",
-    sizes: ["M", "L", "XL"],
-    description:
-      "Field-ready modular wear in stone tones, featuring directional seams and a draped silhouette for fluid movement across environments.",
-  },
-  {
-    name: "Subzero",
-    price: "190",
-    color: "Ice",
-    tag: "Functionary",
-    sizes: ["S", "M", "L"],
-    description:
-      "Lightweight jacket in a subtle ice tone, crafted for colder atmospheres with breathable construction and quiet futurism at its core.",
-  },
-  {
-    name: "Echo Pattern",
-    price: "140",
-    color: "Grey",
-    tag: "Deform",
-    sizes: ["M", "L", "XL", "XXL"],
-    description:
-      "Textured grey layering piece with soft distortion surface details and a neutral aesthetic calibrated for motion and utility.",
-  },
-  {
-    name: "Soft Matter",
-    price: "120",
-    color: "White",
-    tag: "Sheerform",
-    sizes: ["S", "M", "L"],
-    description:
-      "Minimal white layer with soft-shell build and structural flow, balancing technical lines with fluid fabric motion.",
-  },
-  {
-    name: "Ghostwear",
-    price: "185",
-    color: "White",
-    tag: "Functionary",
-    sizes: ["M", "L", "XL"],
-    description:
-      "Translucent white shell with matte tonal overlays—built for minimal visibility and sensory softness across temperature shifts.",
-  },
-  {
-    name: "Core Module",
-    price: "150",
-    color: "Stone",
-    tag: "Deform",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "Stone-layered midweight core piece with minimal branding, modular attachments, and internal system paneling.",
-  },
-  {
-    name: "Persona Null",
-    price: "175",
-    color: "Black",
-    tag: "Sheerform",
-    sizes: ["M", "L", "XL"],
-    description:
-      "Anti-identity outerwear in blackout, asymmetric cut lines and concealed fastenings—designed for detachment and drift.",
-  },
-  {
-    name: "Axis Drift",
-    price: "165",
-    color: "Grey",
-    tag: "Functionary",
-    sizes: ["S", "M", "L"],
-    description:
-      "A soft grey utility form built to wrap and reorient on body movement, echoing collapse and stretch in motion.",
-  },
-  {
-    name: "Patch v0.2",
-    price: "110",
-    color: "White",
-    tag: "Deform",
-    sizes: ["M", "L", "XL"],
-    description:
-      "Crisp white form with adaptive panel layout and micro utility pockets—a prototype layer made for future rewrites.",
-  },
-  {
-    name: "Relay Shell",
+    name: "Essentials - 01",
+    slug: "essentials-01",
     price: "145",
     color: "Black",
-    tag: "Sheerform",
-    sizes: ["S", "M", "L"],
+    tag: "Essentials",
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
-      "Shadow black outer with reactive fabric and structural folds, constructed to bypass signal and retain warmth.",
+      "A precision-fit base layer with micro-seamed construction and adaptive compression — designed for direct skin contact and unrestricted motion across all conditions.",
   },
   {
-    name: "Clone Form",
+    name: "Essentials - 02",
+    slug: "essentials-02",
+    price: "140",
+    color: "Stone",
+    tag: "Essentials",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Mid-layer utility piece with internal channel seams and modular pocket system — bridges the gap between base and outer with quiet functional intent.",
+  },
+  {
+    name: "Essentials - 03",
+    slug: "essentials-03",
     price: "130",
     color: "Ice",
-    tag: "Functionary",
-    sizes: ["S", "M", "L", "XL"],
+    tag: "Essentials",
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
-      "Icy neutral silhouette with reflective accents and reversible construction—a dual-form expression of adaptive layering.",
+      "Relaxed-cut essential with dropped shoulders and single-panel construction — stripped of detail, built for daily deployment without visual interference.",
   },
   {
-    name: "Cold Proxy",
-    price: "155",
-    color: "Grey",
-    tag: "Deform",
-    sizes: ["M", "L", "XL"],
-    description:
-      "Soft grey insulated layer mimicking cold tactility, designed for semi-static zones and low interaction corridors.",
-  },
-  {
-    name: "Frame Shift",
-    price: "160",
-    color: "Stone",
-    tag: "Sheerform",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "Stone-finished body with angular overlay panels and modular zip-outs—built to reconfigure with each movement frame.",
-  },
-  {
-    name: "Veil Unit",
-    price: "175",
-    color: "Ice",
-    tag: "Functionary",
-    sizes: ["S", "M", "L"],
-    description:
-      "Semi-translucent layering piece in soft ice, designed for concealment and diffusion—ideal for fragmented lighting and modular outfitting.",
-  },
-  {
-    name: "Null Form",
-    price: "165",
-    color: "Black",
-    tag: "Deform",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "An all-black uniform shell stripped of markings, with dimensional construction lines and an identity-less profile made for clean resets.",
-  },
-  {
-    name: "Infra Veil",
-    price: "170",
-    color: "White",
-    tag: "Sheerform",
-    sizes: ["XS", "S", "M", "L"],
-    description:
-      "A radiant white coat with subtle sublayer seams and soft mirrored accents, designed for high-contrast atmospheres and neutral layering.",
-  },
-  {
-    name: "Zone Artifact",
-    price: "185",
-    color: "Stone",
-    tag: "Functionary",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "Stone-colored soft-armor inspired shell jacket with reactive texture zones, adaptive stitch mapping, and tonal fracture lines.",
-  },
-  {
-    name: "Shellcode",
-    price: "160",
-    color: "Grey",
-    tag: "Deform",
-    sizes: ["S", "M", "L"],
-    description:
-      "Neutral grey long-form with sealed placket, hidden entry points, and binary stitch overlays—built like code, worn like static.",
-  },
-  {
-    name: "Second Host",
-    price: "150",
-    color: "Ice",
-    tag: "Sheerform",
-    sizes: ["S", "M", "L"],
-    description:
-      "Pale ice-toned skinwear form with low-profile cuffs and a neutral inner mesh—softly modular, designed for second-layer performance.",
-  },
-  {
-    name: "Noir Signal",
-    price: "190",
-    color: "Black",
-    tag: "Functionary",
-    sizes: ["M", "L", "XL"],
-    description:
-      "Deep black statement outerwear with curved overlay paneling and signal-suppressed design for quiet visual presence in charged spaces.",
-  },
-  {
-    name: "Dust Layer",
-    price: "142",
-    color: "Stone",
-    tag: "Deform",
-    sizes: ["XS", "S", "M", "L"],
-    description:
-      "Low-movement layer in muted stone, cut with angular drop sleeves and a dust-soft finish that breaks light across the body.",
-  },
-  {
-    name: "Greycode",
-    price: "158",
-    color: "Grey",
-    tag: "Sheerform",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "A soft technical shell in neutral grey with encoded vent seams and microstructured collar—functionality compressed into silence.",
-  },
-  {
-    name: "Unbody",
-    price: "170",
-    color: "Black",
-    tag: "Functionary",
-    sizes: ["S", "M", "L"],
-    description:
-      "A blackout top-layer with sculpted tension zones and minimal profile, designed to disappear under low contrast and diffuse edge.",
-  },
-  {
-    name: "Pale Shard",
-    price: "145",
-    color: "White",
-    tag: "Deform",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "Crisp white topcoat with shard-line darting and a nearly frameless silhouette that refracts form without reflecting structure.",
-  },
-  {
-    name: "Static Mist",
+    name: "Essentials - 04",
+    slug: "essentials-04",
     price: "135",
     color: "Grey",
-    tag: "Sheerform",
-    sizes: ["M", "L", "XL"],
+    tag: "Essentials",
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
-      "Grey-toned wind layer with interference-resistant fiber blend, shaped to disrupt silhouettes in motion and dissolve into atmosphere.",
+      "Straight-form technical trouser with articulated knee shaping and low-profile waistband — designed to move with the body rather than against it.",
   },
   {
-    name: "Ghost Line",
-    price: "155",
-    color: "Ice",
-    tag: "Functionary",
-    sizes: ["S", "M", "L", "XL"],
-    description:
-      "Pale minimal field uniform in ice, defined by seamless construction and directional venting for high fluidity across movement zones.",
-  },
-  {
-    name: "Phantom Skin",
-    price: "165",
+    name: "Essentials - 05",
+    slug: "essentials-05",
+    price: "125",
     color: "White",
-    tag: "Deform",
-    sizes: ["XS", "S", "M", "L"],
+    tag: "Essentials",
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
-      "High-density lightweight outer layer in white, designed with anatomical panel flow and soft-reactive pressure folds across spine line.",
+      "Minimal sleeveless shell with internal structured panels — functions as a standalone layer or climate-regulating mid-system component.",
   },
+
+  // Streetwear
   {
-    name: "Overcast Proxy",
-    price: "150",
-    color: "Grey",
-    tag: "Sheerform",
-    sizes: ["S", "M", "L"],
-    description:
-      "Neutral grey proxy fit with curved arms and fog-treated finish—built for ghosted movement across filtered daylight corridors.",
-  },
-  {
-    name: "Neutral Drift",
-    price: "165",
+    name: "Streetwear - 01",
+    slug: "streetwear-01",
+    price: "175",
     color: "Black",
-    tag: "Functionary",
+    tag: "Streetwear",
     sizes: ["S", "M", "L", "XL"],
     description:
-      "Minimal black utility form with adaptive paneling and neutral drift construction—designed for seamless integration across environments.",
+      "Oversized shell with exaggerated proportions and raw-edge finishing — built for presence in high-density environments where silhouette is signal.",
+  },
+  {
+    name: "Streetwear - 02",
+    slug: "streetwear-02",
+    price: "165",
+    color: "Stone",
+    tag: "Streetwear",
+    sizes: ["S", "M", "L", "XL"],
+    description:
+      "Wide-leg cargo form with multi-pocket architecture and reinforced stress zones — functional volume translated into street-ready structure.",
+  },
+  {
+    name: "Streetwear - 03",
+    slug: "streetwear-03",
+    price: "160",
+    color: "Ice",
+    tag: "Streetwear",
+    sizes: ["S", "M", "L", "XL"],
+    description:
+      "Heavyweight layered hood with internal drawcord routing and forward-seam construction — engineered warmth with a confrontational silhouette.",
+  },
+  {
+    name: "Streetwear - 04",
+    slug: "streetwear-04",
+    price: "158",
+    color: "Grey",
+    tag: "Streetwear",
+    sizes: ["S", "M", "L", "XL"],
+    description:
+      "Drop-shoulder cut with extended body length and minimal branding — the quiet uniform of anonymous movement through urban space.",
+  },
+  {
+    name: "Streetwear - 05",
+    slug: "streetwear-05",
+    price: "168",
+    color: "White",
+    tag: "Streetwear",
+    sizes: ["S", "M", "L", "XL"],
+    description:
+      "Technical bomber with bonded seam construction and concealed utility pockets — compact and clean, designed for rapid transition between environments.",
+  },
+
+  // Outerwear
+  {
+    name: "Outerwear - 01",
+    slug: "outerwear-01",
+    price: "195",
+    color: "Black",
+    tag: "Outerwear",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Structured shell jacket with sealed multi-panel construction and internal storm collar — primary defense layer against variable atmospheric conditions.",
+  },
+  {
+    name: "Outerwear - 02",
+    slug: "outerwear-02",
+    price: "185",
+    color: "Stone",
+    tag: "Outerwear",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Long-form overcoat with weighted drape and concealed fastening system — designed to envelop and insulate across extended exposure zones.",
+  },
+  {
+    name: "Outerwear - 03",
+    slug: "outerwear-03",
+    price: "190",
+    color: "Ice",
+    tag: "Outerwear",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Insulated puffer with baffled chamber construction and packable volume — thermal regulation without bulk, deployable in seconds.",
+  },
+  {
+    name: "Outerwear - 04",
+    slug: "outerwear-04",
+    price: "180",
+    color: "Grey",
+    tag: "Outerwear",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Waterproof rain shell with fully taped seams and vented back panel — engineered for high-precipitation environments and sustained outdoor activity.",
+  },
+  {
+    name: "Outerwear - 05",
+    slug: "outerwear-05",
+    price: "185",
+    color: "White",
+    tag: "Outerwear",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Softshell hybrid with fleece-bonded interior and wind-resistant face fabric — transitions seamlessly between indoor and outdoor temperature zones.",
+  },
+
+  // Accessories
+  {
+    name: "Accessories - 01",
+    slug: "accessories-01",
+    price: "155",
+    color: "Black",
+    tag: "Accessories",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Structured six-panel cap with rigid inner frame and minimal exterior finish — completes the system from the top down.",
+  },
+  {
+    name: "Accessories - 02",
+    slug: "accessories-02",
+    price: "148",
+    color: "Stone",
+    tag: "Accessories",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Modular utility tote with internal organization slots and detachable shoulder strap — carries the kit across all movement scenarios.",
+  },
+  {
+    name: "Accessories - 03",
+    slug: "accessories-03",
+    price: "152",
+    color: "Ice",
+    tag: "Accessories",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Technical harness belt with adjustable strap geometry and multiple attachment points — functional architecture worn directly on the body.",
+  },
+  {
+    name: "Accessories - 04",
+    slug: "accessories-04",
+    price: "145",
+    color: "Grey",
+    tag: "Accessories",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Woven wrap with oversized proportions and pressure-free drape — adds thermal depth to any configuration without structural commitment.",
+  },
+  {
+    name: "Accessories - 05",
+    slug: "accessories-05",
+    price: "150",
+    color: "White",
+    tag: "Accessories",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description:
+      "Fitted hand covers with articulated knuckle construction and extended cuff — protection without sacrificing dexterity or form.",
   },
 ];
