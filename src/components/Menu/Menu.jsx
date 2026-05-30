@@ -296,7 +296,7 @@ const Menu = () => {
   return (
     <nav className="menu" ref={menuRef}>
       <div className="menu-header" onClick={toggleMenu}>
-        <Link href="/" onClick={(e) => e.stopPropagation()}>
+        <Link href="/" onClick={(e) => { e.stopPropagation(); handleLinkClick(); }}>
           <h4 className="menu-logo">R Commerce</h4>
         </Link>
         <button className="menu-toggle" aria-label="Toggle menu">
