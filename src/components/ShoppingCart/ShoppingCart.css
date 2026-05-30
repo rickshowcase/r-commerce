@@ -33,9 +33,6 @@
   transition: transform 0.2s ease;
 }
 
-.shopping-cart-container .cart-button:active {
-  transform: scale(0.95);
-}
 
 .shopping-cart-container .cart-icon {
   color: var(--base-100);
@@ -53,6 +50,12 @@
   justify-content: center;
   font-size: 0.65rem;
   font-weight: 600;
+}
+
+.shopping-cart-container .cart-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: all;
 }
 
 .shopping-cart-container .cart-sidebar {
@@ -267,9 +270,6 @@
   transition: transform 0.2s ease;
 }
 
-.shopping-cart-container .cart-checkout:active {
-  transform: scale(0.95);
-}
 
 @media (max-width: 1000px) {
   .shopping-cart-container {

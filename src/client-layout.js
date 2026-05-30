@@ -15,6 +15,19 @@ export default function ClientLayout({ children, footer }) {
   }, []);
 
   useEffect(() => {
+    const handleMouseDown = (e) => {
+      const btn = e.target.closest("button");
+      if (!btn || btn.dataset.noPress) return;
+      btn.classList.remove("btn-press");
+      void btn.offsetWidth;
+      btn.classList.add("btn-press");
+      btn.addEventListener("animationend", () => btn.classList.remove("btn-press"), { once: true });
+    };
+    window.addEventListener("mousedown", handleMouseDown);
+    return () => window.removeEventListener("mousedown", handleMouseDown);
+  }, []);
+
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 1000);
     };

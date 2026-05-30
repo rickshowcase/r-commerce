@@ -34,6 +34,7 @@ const ShoppingCart = () => {
         {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
       </button>
 
+      {isOpen && <div className="cart-backdrop" onClick={toggleCart} />}
       <div
         className={`cart-sidebar ${isOpen ? "open" : ""}`}
         onWheel={(e) => {
@@ -96,6 +97,7 @@ const ShoppingCart = () => {
                       <p className="cart-item-price">${item.price}</p>
                       <button
                         className="cart-item-remove"
+                        data-no-press
                         onClick={() => removeFromCart(item.cartId)}
                       >
                         Remove
