@@ -40,7 +40,7 @@
 .product .product-info .add-to-cart-btn {
   width: 100%;
   margin-top: 0.5rem;
-  background-color: var(--base-700);
+  background-color: var(--accent);
   color: var(--base-100);
   padding: 0.75rem;
   font-size: clamp(0.75rem, 0.9vw, 0.8rem);

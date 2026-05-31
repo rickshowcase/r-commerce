@@ -42,12 +42,12 @@
 }
 
 .products-header .filter-bar-tags p {
-  color: var(--base-400);
+  color: var(--base-500);
   cursor: pointer;
 }
 
 .products-header .filter-bar-tags p.active {
-  color: var(--base-700);
+  color: var(--accent);
 }
 
 .product-list {

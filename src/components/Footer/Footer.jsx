@@ -19,7 +19,7 @@ const Footer = () => {
                 <Link href="/">Index</Link>
                 <Link href="/wardrobe">Wardrobe</Link>
                 <Link href="/genesis">Genesis</Link>
-                <Link href="/contact">Touchpoint</Link>
+                <Link href="/touchpoint">Touchpoint</Link>
                 <Link href="/lookbook">Lookbook</Link>
               </div>
             </div>
@@ -58,9 +58,9 @@ const Footer = () => {
           <div className="footer-row">
             <div className="footer-copyright">
               <h5>R Commerce</h5>
-              <p className="bodyCopy">&copy;2025 All modules reserved.</p>
+              <p className="bodyCopy">&copy;2026 All modules reserved.</p>
               <p className="bodyCopy" id="copyright-text">
-                Built by Rick
+                BUILT BY RICK
               </p>
             </div>
           </div>

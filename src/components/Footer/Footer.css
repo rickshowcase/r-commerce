@@ -31,7 +31,7 @@ footer .footer-row:nth-child(1) .footer-col {
 }
 
 footer .footer-row:nth-child(1) .footer-col .footer-col-header p {
-  color: var(--base-500);
+  color: var(--accent);
 }
 
 footer .footer-row:nth-child(1) .footer-col .footer-col-links {

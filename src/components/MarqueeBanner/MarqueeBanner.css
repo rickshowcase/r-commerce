@@ -24,7 +24,8 @@
 .marquee-banner .marquees .marquee-header {
   position: relative;
   width: 200%;
-  color: var(--base-300);
+  color: var(--accent);
+  opacity: 0.35;
   will-change: transform;
 }
 
@@ -43,7 +44,7 @@
   max-width: 600px;
   max-height: 40rem;
   border-radius: 0.75rem;
-  background-color: var(--base-700);
+  background-color: var(--base-300);
   overflow: hidden;
 }
 
@@ -56,7 +57,7 @@
 .marquee-banner .banner .banner-content {
   width: 100%;
   padding: 3rem 2rem 2rem 2rem;
-  color: var(--base-100);
+  color: var(--base-700);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +67,7 @@
 }
 
 .marquee-banner .banner .banner-content p {
-  color: var(--base-400);
+  color: var(--base-600);
 }
 
 .marquee-banner .banner .banner-logo {
@@ -74,7 +75,7 @@
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--base-100);
+  color: var(--base-700);
 }
 
 @media (max-width: 1000px) {

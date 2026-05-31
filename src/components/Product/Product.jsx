@@ -16,7 +16,7 @@ const Product = ({
 
   return (
     <div className={`product ${className}`} ref={innerRef} style={style}>
-      <Link href={`/product/${product.slug}`} className="product-img">
+      <Link href={`/product/${product.slug}`} className="product-img" onClick={() => window.dispatchEvent(new Event("menu:close"))}>
         <img src={`/products/product_${productIndex}.png`} alt={product.name} />
       </Link>
       <div className="product-info">

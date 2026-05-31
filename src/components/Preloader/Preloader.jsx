@@ -37,6 +37,8 @@ const Preloader = () => {
       if (!showPreloader) return;
 
       document.fonts.ready.then(() => {
+        if (!wrapperRef.current) return;
+
         const logoSplit = SplitText.create(".preloader-logo h1", {
           type: "chars",
           charsClass: "char",

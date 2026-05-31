@@ -66,7 +66,7 @@ export default function Index() {
 
       <section className="hero" ref={heroSectionRef}>
         <DotMatrix
-          color="#969992"
+          color="#3a3a3a"
           dotSize={2}
           spacing={5}
           opacity={0.9}

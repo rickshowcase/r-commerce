@@ -138,11 +138,11 @@ const productPages = {
 };
 
 const COLORS = [
-  { name: "Black", hex: "#121212" },
   { name: "Stone", hex: "#a49e91" },
   { name: "Ice",   hex: "#bfc4cb" },
   { name: "Grey",  hex: "#686868" },
   { name: "White", hex: "#ffffff" },
+  { name: "Black", hex: "#121212" },
 ];
 
 export default function ProductPage({ params }) {
@@ -153,7 +153,7 @@ export default function ProductPage({ params }) {
   const heroRef = useRef(null);
   const activeMinimapIndex = useRef(0);
   const [relatedProducts, setRelatedProducts] = useState([]);
-  const [selectedColor, setSelectedColor] = useState(currentProduct?.color || "Black");
+  const [selectedColor, setSelectedColor] = useState(COLORS[0].name);
   const [selectedSize, setSelectedSize] = useState(pageData?.sizes?.[0] || "S");
   const addToCart = useCartStore((state) => state.addToCart);
   const pathname = usePathname();
@@ -163,7 +163,7 @@ export default function ProductPage({ params }) {
   useEffect(() => {
     const related = products.filter((p) => p.tag === pageData.tag && p.slug !== slug);
     setRelatedProducts(related);
-    setSelectedColor("Black");
+    setSelectedColor(COLORS[0].name);
     setSelectedSize(pageData.sizes[0]);
   }, [slug]);
 

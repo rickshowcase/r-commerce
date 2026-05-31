@@ -68,7 +68,7 @@
 }
 
 .menu .menu-hamburger-icon.open .menu-item {
-  background: var(--base-100);
+  background: var(--base-700);
 }
 
 .menu .menu-hamburger-icon.open .menu-item:first-child {
@@ -106,7 +106,7 @@
 }
 
 .menu .menu-items-header p {
-  color: var(--base-500);
+  color: var(--base-400);
 }
 
 .menu .menu-overlay-col-sm {
@@ -156,12 +156,12 @@
   display: block;
   color: var(--base-100);
   padding: 1rem 0;
-  border-bottom: 1px dashed var(--base-500);
+  border-bottom: 1px dashed var(--base-400);
   will-change: transform, opacity;
 }
 
 .menu .menu-overlay-footer {
-  border-top: 1px dashed var(--base-500);
+  border-top: 1px dashed var(--base-400);
   padding: 1rem 0 0 0;
   width: 100%;
   display: flex;

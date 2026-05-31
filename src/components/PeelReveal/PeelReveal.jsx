@@ -47,7 +47,7 @@ const PeelReveal = () => {
         ScrollTrigger.create({
           trigger: section,
           start: "top top",
-          end: () => `+=${window.innerHeight * 4}`,
+          end: () => `+=${window.innerHeight * 2}`,
           pin: true,
           pinSpacing: true,
           scrub: 1,

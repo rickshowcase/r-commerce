@@ -20,6 +20,7 @@ const Menu = () => {
   const splitTextsRef = useRef([]);
   const mainLinkSplitsRef = useRef([]);
   const lastScrollY = useRef(0);
+  const linkClickTimerRef = useRef(null);
 
   const scrambleText = (elements, duration = 0.4) => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
@@ -112,6 +113,12 @@ const Menu = () => {
     }, "<");
   };
 
+  useEffect(() => {
+    const handler = () => { if (isOpen) handleLinkClick(); };
+    window.addEventListener("menu:close", handler);
+    return () => window.removeEventListener("menu:close", handler);
+  }, [isOpen]);
+
   const closeMenu = () => {
     setIsOpen(false);
     setIsAnimating(true);
@@ -189,11 +196,15 @@ const Menu = () => {
 
   const handleLinkClick = () => {
     if (isOpen) {
-      setTimeout(() => {
+      linkClickTimerRef.current = setTimeout(() => {
         closeMenu();
       }, 500);
     }
   };
+
+  useEffect(() => {
+    return () => { if (linkClickTimerRef.current) clearTimeout(linkClickTimerRef.current); };
+  }, []);
 
   useEffect(() => {
     gsap.set(menuOverlayRef.current, {

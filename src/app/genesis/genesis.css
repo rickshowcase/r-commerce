@@ -15,7 +15,7 @@
 
 .genesis-hero .container {
   position: relative;
-  color: var(--base-100);
+  color: var(--base-700);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,7 +29,7 @@
 }
 
 .genesis-hero .container .gen-hero-copy p {
-  color: var(--base-400);
+  color: var(--base-600);
 }
 
 .genesis-hero .container .gen-hero-copy:nth-child(3) {
@@ -125,7 +125,7 @@
 
 .project-page-whitespace {
   width: 100%;
-  height: 600vh;
+  height: 300vh;
 }
 
 @media (max-width: 1000px) {
