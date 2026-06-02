@@ -269,7 +269,7 @@
   transition: transform 0.2s ease;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .shopping-cart-container {
     padding: 1rem;
   }

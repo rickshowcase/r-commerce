@@ -2,7 +2,7 @@
 import "./ShoppingCart.css";
 import { useState, useEffect } from "react";
 
-import { products } from "@/app/wardrobe/products";
+import { products } from "@/app/shop/products";
 import { useCartStore, useCartCount, useCartSubtotal } from "@/store/cartStore";
 
 const ShoppingCart = () => {
@@ -30,7 +30,7 @@ const ShoppingCart = () => {
   return (
     <div className="shopping-cart-container">
       <button className="cart-button" onClick={toggleCart}>
-        <span className="cart-icon">BAG</span>
+        <span className="cart-icon">CART</span>
         {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
       </button>
 
@@ -53,7 +53,7 @@ const ShoppingCart = () => {
       >
         <div className="cart-sidebar-content">
           <div className="cart-header">
-            <h2>Bag</h2>
+            <h2>Cart</h2>
             <button className="cart-close" onClick={toggleCart}>
               Close
             </button>
@@ -69,7 +69,7 @@ const ShoppingCart = () => {
           >
             {cartItems.length === 0 ? (
               <div className="cart-empty">
-                <p>Your bag is empty</p>
+                <p>Your cart is empty</p>
               </div>
             ) : (
               cartItems.map((item, index) => {

@@ -9,10 +9,10 @@ export default function Lookbook() {
     <section className="lookbook">
       <div className="section-footer">
         <Copy animateOnScroll={false} delay={0.65} type="flicker">
-          <p>[ Look Stream ]</p>
+          <p>[ Signal Archive ]</p>
         </Copy>
         <Copy animateOnScroll={false} delay={0.65} type="flicker">
-          <p>[ View Matrix ]</p>
+          <p>[ Visual Index ]</p>
         </Copy>
       </div>
       <Orb />

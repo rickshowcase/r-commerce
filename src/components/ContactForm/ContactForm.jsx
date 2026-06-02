@@ -130,17 +130,17 @@ const ContactForm = () => {
       </div>
       <div className="contact-form-container">
         <div className="cf-header">
-          <h4>Transmit updates, not noise.</h4>
+          <h4>Enter the archive. Exit the noise.</h4>
         </div>
         <div className="cf-copy">
           <p className="bodyCopy sm">
-            You'll only hear from us when something built is worth showing.
+            New drops and updates land here first. No clutter, no filler.
           </p>
         </div>
         <div className="cf-input">
           <input
             type="email"
-            placeholder="Enter Signal Address"
+            placeholder="Enter Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -166,7 +166,7 @@ const ContactForm = () => {
           <div className="cf-divider"></div>
           <div className="cf-footer-copy">
             <p className="bodyCopy sm">
-              No marketing cycles. Just rare, coded dispatches.
+              Irregular by design. Relevant by intent.
             </p>
           </div>
         </div>

@@ -126,15 +126,15 @@ const PeelReveal = () => {
       <section className="peel-reveal">
         <div className="section-header">
           <Copy type="flicker">
-            <p>Signal type: Neutral</p>
+            <p>Form class: Absolute</p>
           </Copy>
           <Copy type="flicker">
-            <p>Module ID: RCommerce_001</p>
+            <p>Archive ID: RCommerce_001</p>
           </Copy>
         </div>
         <div className="section-footer">
           <Copy type="flicker">
-            <p>Status: Detached</p>
+            <p>Status: Isolated</p>
           </Copy>
         </div>
         <div className="peel-reveal-img-container">

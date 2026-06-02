@@ -32,7 +32,8 @@ export default function Touchpoint() {
     if (!container) return;
 
     const timer = setTimeout(() => {
-      const image = container.querySelector(".contact-callout-img");
+      const leftImage = container.querySelector(".contact-callout-img-left");
+      const rightImage = container.querySelector(".contact-callout-img-right");
 
       const st = ScrollTrigger.create({
         trigger: container,
@@ -41,11 +42,8 @@ export default function Touchpoint() {
         scrub: 1,
         onUpdate: (self) => {
           const progress = self.progress;
-
-          const translateY = -progress * 20;
-          gsap.set(image, {
-            y: `${translateY}rem`,
-          });
+          gsap.set(leftImage, { y: `${progress * 25}rem` });
+          gsap.set(rightImage, { y: `${-progress * 25}rem` });
         },
       });
 
@@ -66,13 +64,13 @@ export default function Touchpoint() {
           <div className="contact-hero-col contact-hero-copy">
             <div className="contact-header">
               <Copy animateOnScroll={false} delay={0.75}>
-                <h3>Outbound access is limited, proceed with intent.</h3>
+                <h3>R Commerce is reachable. Proceed with purpose.</h3>
               </Copy>
             </div>
             <div className="contact-meta">
               <div className="contact-meta-block">
                 <Copy animateOnScroll={false} delay={0.9}>
-                  <p className="bodyCopy">External Comms Protocol</p>
+                  <p className="bodyCopy">General Enquiries</p>
                 </Copy>
                 <Copy animateOnScroll={false} delay={1}>
                   <h4>info@rickshowcase.com</h4>
@@ -80,7 +78,7 @@ export default function Touchpoint() {
               </div>
               <div className="contact-meta-block">
                 <Copy animateOnScroll={false} delay={1.1}>
-                  <p className="bodyCopy">Dispatch Inquiry System</p>
+                  <p className="bodyCopy">Orders & Support</p>
                 </Copy>
                 <Copy animateOnScroll={false} delay={1.2}>
                   <h4>info@rickshowcase.com</h4>
@@ -97,6 +95,12 @@ export default function Touchpoint() {
       </section>
 
       <section className="contact-callout" ref={calloutRef}>
+        <div className="contact-callout-img contact-callout-img-left">
+          <img src="/contact/contact-callout.jpg" alt="" />
+        </div>
+        <div className="contact-callout-img contact-callout-img-right">
+          <img src="/contact/contact-callout.jpg" alt="" />
+        </div>
         <div className="container">
           <div className="contact-callout-header">
             <div className="contact-callout-logo">
@@ -104,16 +108,13 @@ export default function Touchpoint() {
             </div>
             <Copy type="flicker">
               <p>
-                Get early signals, private releases, and occasional noise worth
-                hearing. You'll know when it matters.
+                Early access, private drops, and direct releases from R Commerce.
+                Only sent when something is worth sending.
               </p>
             </Copy>
             <Copy>
-              <h1>Connect to the silent grid</h1>
+              <h1>Step into the business archive</h1>
             </Copy>
-            <div className="contact-callout-img">
-              <img src="/contact/contact-callout.jpg" alt="" />
-            </div>
           </div>
         </div>
       </section>

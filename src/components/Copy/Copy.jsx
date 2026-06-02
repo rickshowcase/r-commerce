@@ -16,7 +16,6 @@ export default function Copy({
   type = "slide",
 }) {
   const containerRef = useRef(null);
-  const elementRefs = useRef([]);
   const splitRefs = useRef([]);
 
   const waitForFonts = async () => {
@@ -45,8 +44,9 @@ export default function Copy({
       const initializeSplitText = async () => {
         await waitForFonts();
 
+        if (!containerRef.current) return;
+
         splitRefs.current = [];
-        elementRefs.current = [];
 
         let elements = [];
         if (containerRef.current.hasAttribute("data-copy-wrapper")) {
@@ -59,7 +59,6 @@ export default function Copy({
           const allLines = [];
 
           elements.forEach((element) => {
-            elementRefs.current.push(element);
 
             const split = SplitText.create(element, {
               type: "lines",
@@ -85,6 +84,12 @@ export default function Copy({
 
           gsap.set(allLines, { y: "100%" });
 
+          if (animateOnScroll) {
+            gsap.set(containerRef.current, { visibility: "visible" });
+          } else {
+            gsap.to(containerRef.current, { visibility: "visible", duration: 0, delay: delay });
+          }
+
           const animation = gsap.to(allLines, {
             y: "0%",
             duration: 1,
@@ -107,7 +112,6 @@ export default function Copy({
           const allChars = [];
 
           elements.forEach((element) => {
-            elementRefs.current.push(element);
 
             const split = SplitText.create(element, {
               type: "words,chars",
@@ -118,6 +122,7 @@ export default function Copy({
           });
 
           gsap.set(allChars, { opacity: 0 });
+          gsap.set(containerRef.current, { visibility: "visible" });
 
           const animation = gsap.to(allChars, {
             duration: 0.05,
@@ -157,11 +162,14 @@ export default function Copy({
   );
 
   if (React.Children.count(children) === 1) {
-    return React.cloneElement(children, { ref: containerRef });
+    return React.cloneElement(children, {
+      ref: containerRef,
+      style: { ...children.props.style, visibility: "hidden" },
+    });
   }
 
   return (
-    <div ref={containerRef} data-copy-wrapper="true">
+    <div ref={containerRef} data-copy-wrapper="true" style={{ visibility: "hidden" }}>
       {children}
     </div>
   );

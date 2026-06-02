@@ -52,7 +52,7 @@
 
 .genesis-about {
   position: relative;
-  padding: 8rem 0;
+  padding: 4rem 0 10rem 0;
   background-color: var(--base-100);
 }
 
@@ -61,7 +61,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .genesis-about .container .genesis-about-logo {
@@ -128,7 +128,7 @@
   height: 300vh;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .genesis-hero .container .gen-hero-copy:nth-child(3) h1,
   .genesis-about .container .genesis-about-copy {
     width: 100%;

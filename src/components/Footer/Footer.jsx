@@ -13,30 +13,30 @@ const Footer = () => {
           <div className="footer-row">
             <div className="footer-col">
               <div className="footer-col-header">
-                <p className="bodyCopy">Root</p>
+                <p className="bodyCopy">Pages</p>
               </div>
               <div className="footer-col-links">
-                <Link href="/">Index</Link>
-                <Link href="/wardrobe">Wardrobe</Link>
-                <Link href="/genesis">Genesis</Link>
-                <Link href="/touchpoint">Touchpoint</Link>
+                <Link href="/">Home</Link>
+                <Link href="/shop">Shop</Link>
+                <Link href="/about">About</Link>
                 <Link href="/lookbook">Lookbook</Link>
+                <Link href="/contact">Contact</Link>
               </div>
             </div>
             <div className="footer-col">
               <div className="footer-col-header">
-                <p className="bodyCopy">Connect Feed</p>
+                <p className="bodyCopy">Follow</p>
               </div>
               <div className="footer-col-links">
                 <a
-                  href="https://www.instagram.com/rcommerce/"
+                  href="https://www.instagram.com/rickshowcaseig/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Instagram
                 </a>
                 <a
-                  href="https://www.youtube.com/@rcommerce"
+                  href="https://www.youtube.com/@rickshowcaseyt"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -46,12 +46,11 @@ const Footer = () => {
             </div>
             <div className="footer-col">
               <div className="footer-col-header">
-                <p className="bodyCopy">Open Line</p>
+                <p className="bodyCopy">Location</p>
               </div>
               <div className="footer-col-links">
-                <p>Unit 07, Sector N</p>
-                <p>Layer 2, South Terminal</p>
-                <p>System 021, Earth</p>
+                <p>Markham, Ontario</p>
+                <p>Canada</p>
               </div>
             </div>
           </div>

@@ -61,8 +61,9 @@
 }
 
 .about .about-copy .about-icon {
-  width: 25rem;
-  height: 25rem;
+  width: 21rem;
+  height: 21rem;
+  margin-top: 1.3rem;
 }
 
 .about .about-copy .about-icon svg {
@@ -144,21 +145,7 @@
   .featured-products .featured-products-list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media (max-width: 768px) {
-  .featured-products .featured-products-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .featured-products .featured-products-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 1000px) {
   .hero .hero-header {
     width: calc(100% - 3rem);
   }
@@ -173,8 +160,8 @@
   }
 }
 
-@media (min-width: 2000px) {
-  .hero .hero-header {
-    width: 40%;
+@media (max-width: 767px) {
+  .featured-products .featured-products-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -3,7 +3,7 @@ import "./home.css";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-import { products } from "./wardrobe/products";
+import { products } from "./shop/products";
 import Preloader from "@/components/Preloader/Preloader";
 import DotMatrix from "@/components/DotMatrix/DotMatrix";
 import BrandIcon from "@/components/BrandIcon/BrandIcon";
@@ -69,13 +69,13 @@ export default function Index() {
           color="#3a3a3a"
           dotSize={2}
           spacing={5}
-          opacity={0.9}
+          opacity={0.7}
           delay={isInitialLoad.current ? 6 : 1.125}
         />
         <div className="container">
           <div className="hero-header" ref={heroHeaderRef}>
             <Copy animateOnScroll={false} delay={isInitialLoad.current ? 5.5 : 0.65}>
-              <h1>Silhouettes for the Next Era</h1>
+              <h1>R Commerce. Built for the Next Era</h1>
             </Copy>
           </div>
         </div>
@@ -88,14 +88,14 @@ export default function Index() {
             delay={isInitialLoad.current ? 7.5 : 0.65}
             animateOnScroll={false}
           >
-            <p>Void Index</p>
+            <p>Dark Field</p>
           </Copy>
           <Copy
             type="flicker"
             delay={isInitialLoad.current ? 7.5 : 0.65}
             animateOnScroll={false}
           >
-            <p>Model v.23</p>
+            <p>Form R.01</p>
           </Copy>
         </div>
       </section>
@@ -104,11 +104,11 @@ export default function Index() {
         <div className="container">
           <div className="about-copy">
             <Copy type="flicker">
-              <p>Clothing reduced to pure signal</p>
+              <p>Clothing reduced to essential form</p>
             </Copy>
             <Copy>
               <h3>
-                Our collections are built for the frictionless, the fast, and
+                R Commerce is built for the frictionless, the fast, and
                 the quietly defiant.
               </h3>
             </Copy>
@@ -119,7 +119,7 @@ export default function Index() {
         </div>
         <div className="section-footer light">
           <Copy type="flicker">
-            <p>/ Core State /</p>
+            <p>/ Base Form /</p>
           </Copy>
         </div>
       </section>
@@ -128,11 +128,11 @@ export default function Index() {
         <div className="container">
           <div className="featured-products-header">
             <Copy type="flicker">
-              <p>Featured Units</p>
+              <p>Active Units</p>
             </Copy>
             <Copy>
               <h3>
-                Selected <br /> Garments
+                Current <br /> Pieces
               </h3>
             </Copy>
           </div>
@@ -140,10 +140,10 @@ export default function Index() {
             <div className="featured-products-divider"></div>
             <div className="featured-products-labels">
               <Copy type="flicker">
-                <p>Primary Set</p>
+                <p>Current Drop</p>
               </Copy>
               <Copy type="flicker">
-                <Link href="/wardrobe">View Archive</Link>
+                <Link href="/shop">Full Archive</Link>
               </Copy>
             </div>
           </div>

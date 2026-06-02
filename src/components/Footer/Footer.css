@@ -58,7 +58,7 @@ footer .footer-row:nth-child(2) .footer-copyright p:nth-child(2) {
   line-height: 1.25;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   footer {
     margin-top: 0;
   }
@@ -82,11 +82,5 @@ footer .footer-row:nth-child(2) .footer-copyright p:nth-child(2) {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
-  }
-}
-
-@media (min-width: 2000px) {
-  footer {
-    margin-top: -40svh;
   }
 }

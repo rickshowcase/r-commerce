@@ -47,16 +47,17 @@
 }
 
 .contact-callout {
+  position: relative;
+  overflow: hidden;
+  min-height: 58rem;
+  display: flex;
+  align-items: center;
   background-color: var(--base-300);
   color: var(--base-700);
 }
 
 .contact-callout p {
   color: var(--base-500);
-}
-
-.contact-callout .container {
-  padding: 12rem 2rem 3rem 2rem;
 }
 
 .contact-callout .container .contact-callout-header {
@@ -75,12 +76,30 @@
 }
 
 .contact-callout .contact-callout-img {
-  transform: translateY(0rem);
+  position: absolute;
   will-change: transform;
-  width: 12rem;
-  height: 16rem;
+  width: 15rem;
+  height: 20rem;
   border-radius: 0.75rem;
   overflow: hidden;
+  z-index: 0;
+}
+
+.contact-callout .contact-callout-img-left {
+  top: 3rem;
+  left: 14rem;
+}
+
+.contact-callout .contact-callout-img-right {
+  bottom: 3rem;
+  right: 14rem;
+}
+
+.contact-callout .container {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2rem 4.5rem 2rem;
+  width: 100%;
 }
 
 .contact-callout .contact-callout-logo {
@@ -89,18 +108,7 @@
   margin-bottom: 2rem;
 }
 
-@media (min-width: 2400px) {
-  .contact-hero .contact-hero-copy {
-    justify-content: center;
-    gap: 20rem;
-  }
-
-  .contact-callout .container .contact-callout-header {
-    width: 50%;
-  }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .contact-hero .container .contact-hero-col.contact-hero-img-wrapper {
     display: none;
   }

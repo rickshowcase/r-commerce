@@ -3,7 +3,7 @@ import "../../unit/unit.css";
 import { use, useRef, useState, useEffect } from "react";
 import { usePathname, notFound } from "next/navigation";
 
-import { products } from "../../wardrobe/products";
+import { products } from "../../shop/products";
 import Copy from "@/components/Copy/Copy";
 import Product from "@/components/Product/Product";
 import { useCartStore } from "@/store/cartStore";
@@ -273,7 +273,7 @@ export default function ProductPage({ params }) {
               </div>
             </div>
             <div className="product-meta-buttons">
-              <button className="primary" onClick={() => addToCart({ ...currentProduct, selectedColor, selectedSize })}>Add To Bag</button>
+              <button className="primary" onClick={() => addToCart({ ...currentProduct, selectedColor, selectedSize })}>Add To Cart</button>
               <button className="secondary">Save Item</button>
             </div>
           </div>
@@ -283,7 +283,7 @@ export default function ProductPage({ params }) {
       <section className="product-details specifications">
         <div className="product-col product-col-copy">
           <div className="product-col-copy-wrapper">
-            <Copy><h4>Specifications</h4></Copy>
+            <Copy><h4>Build Specs</h4></Copy>
             <Copy>
               <p className="bodyCopy lg">{pageData.description}</p>
               <p className="bodyCopy lg">{pageData.construction}</p>
@@ -301,7 +301,7 @@ export default function ProductPage({ params }) {
         </div>
         <div className="product-col product-col-copy">
           <div className="product-col-copy-wrapper">
-            <Copy><h4>Shipping Terms</h4></Copy>
+            <Copy><h4>Dispatch Terms</h4></Copy>
             <Copy>
               <p className="bodyCopy lg">
                 All orders are processed within 5 business days and shipped via
@@ -309,10 +309,10 @@ export default function ProductPage({ params }) {
                 but most domestic shipments arrive within 7 business days.
               </p>
               <p className="bodyCopy lg">
-                We accept returns on unworn items within 14 days of delivery. To
-                initiate a return, please contact our support team with your order
-                number. Refunds are issued to the original payment method once the
-                item is received and inspected.
+                Returns are accepted on unworn items within 14 days of delivery.
+                To initiate a return, contact support with your order number.
+                Refunds are issued to the original payment method once the item
+                is received and inspected.
               </p>
             </Copy>
           </div>
@@ -321,7 +321,7 @@ export default function ProductPage({ params }) {
 
       <section className="related-products">
         <div className="container">
-          <div className="related-products-header"><h3>Parallel Forms</h3></div>
+          <div className="related-products-header"><h3>Related Items</h3></div>
           <div className="related-products-container">
             <div className="container">
               {relatedProducts.map((product) => (

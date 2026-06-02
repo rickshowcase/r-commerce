@@ -39,19 +39,19 @@ const MarqueeBanner = () => {
     <section className="marquee-banner" ref={marqueeBannerRef}>
       <div className="marquees">
         <div className="marquee-header marquee-header-1" ref={marquee1Ref}>
-          <h1>Transmission lost in neutral space</h1>
+          <h1>R Commerce moves through the static</h1>
         </div>
         <div className="marquee-header marquee-header-2" ref={marquee2Ref}>
-          <h1>Synthetic forms archive the signal</h1>
+          <h1>Form held in deliberate absence</h1>
         </div>
       </div>
       <div className="banner">
         <div className="banner-content">
           <Copy type="flicker">
-            <p>[ Frame Shift ]</p>
+            <p>[ Form Break ]</p>
           </Copy>
           <Copy>
-            <h4>Modular silence across systems</h4>
+            <h4>Structure held across the signal</h4>
           </Copy>
         </div>
         <div className="banner-img">

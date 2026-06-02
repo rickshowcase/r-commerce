@@ -172,7 +172,7 @@
   color: var(--base-100);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .menu {
     top: 1.5rem;
     width: calc(100% - 3rem);

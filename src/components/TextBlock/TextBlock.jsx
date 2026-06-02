@@ -9,7 +9,7 @@ const TextBlock = () => {
       <div className="container">
         <div className="text-block-col">
           <Copy>
-            <h3>Designed absence, engineered silence.</h3>
+            <h3>Deliberate form. Engineered silence.</h3>
           </Copy>
           <div className="text-block-logo">
             <BrandIcon />
@@ -19,9 +19,9 @@ const TextBlock = () => {
           <div className="text-block-copy">
             <Copy>
               <p className="bodyCopy sm">
-                Designed for quiet tension. Built on structure, not spectacle.
-                Each piece functions with intent, nothing more. Neutral in tone,
-                deliberate in volume, uniform for moving through static.
+                R Commerce runs on quiet tension. Built on structure, stripped
+                of spectacle. Each piece carries intent, nothing more. Neutral
+                in tone, precise in volume, made for moving through static.
               </p>
             </Copy>
           </div>

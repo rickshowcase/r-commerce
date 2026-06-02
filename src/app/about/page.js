@@ -125,25 +125,25 @@ export default function Genesis() {
         <div className="container">
           <div className="gen-hero-copy">
             <Copy animateOnScroll={false} delay={0.7} type="flicker">
-              <p>Signal over surplus,</p>
-              <p>Fragments of identity,</p>
-              <p>Minimal by necessity.</p>
+              <p>Form above noise,</p>
+              <p>Structure over statement,</p>
+              <p>Minimal by design.</p>
             </Copy>
           </div>
           <div className="gen-hero-copy">
             <Copy animateOnScroll={false} delay={0.8} type="flicker">
-              <p>We design future forms,</p>
-              <p>Built for the now.</p>
+              <p>R Commerce builds forward,</p>
+              <p>Grounded in the now.</p>
             </Copy>
           </div>
           <div className="gen-hero-copy">
             <Copy animateOnScroll={false} delay={0.7}>
-              <h1>The Genesis behind what you wear</h1>
+              <h1>The story behind what you wear</h1>
             </Copy>
             <div className="gen-hero-meta">
               <div className="gen-hero-meta-block">
                 <Copy animateOnScroll={false} delay={0.9} type="flicker">
-                  <p>We create frameworks,</p>
+                  <p>Precision over ornament,</p>
                   <p>For the unnamed future,</p>
                   <p>A study in silhouette.</p>
                 </Copy>
@@ -168,14 +168,14 @@ export default function Genesis() {
               <h4>
                 R Commerce is built on the belief that clothing should operate like
                 a system. Every piece is engineered with intention, shaped by
-                visual logic and designed for a new kind of uniform. We define
-                motion, structure in silence, presence without noise.
+                visual logic and designed for a new kind of uniform. Defined by
+                motion, structured in silence, presence without noise.
               </h4>
             </Copy>
             <Copy>
-              <h4 delay={0.5}>
-                Our aesthetic roots lie in the future, not the past. We create
-                garments that behave like interfaces: minimal, intelligent,
+              <h4>
+                The aesthetic roots of R Commerce lie in the future, not the past.
+                Garments built to behave like interfaces: minimal, intelligent,
                 quietly expressive. Function and form are synchronized, tailored
                 for those who move through digital and physical layers with
                 equal precision. R Commerce is not fashion. It is a transmission.

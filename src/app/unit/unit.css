@@ -264,25 +264,8 @@
   }
 }
 
-@media (max-width: 768px) {
-  .related-products-container .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .related-products-container .container {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 2000px) {
-  .product-meta-container {
-    padding: 25svh 4rem 4rem;
-  }
-
-  .product-col-copy-wrapper {
-    width: 70%;
-    margin: 0 auto;
   }
 }

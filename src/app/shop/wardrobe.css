@@ -63,11 +63,9 @@
 
 @media (max-width: 1024px) {
   .product-list .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 1000px) {
   .products-header .container {
     align-items: center;
     text-align: center;
@@ -75,10 +73,6 @@
 
   .products-header h1 {
     width: 100%;
-  }
-
-  .product-list .container {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .products-header .product-filter-bar {
@@ -90,7 +84,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .product-list .container {
     grid-template-columns: 1fr;
   }

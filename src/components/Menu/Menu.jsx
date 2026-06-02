@@ -322,7 +322,7 @@ const Menu = () => {
         <div className="menu-overlay-items">
           <div className="menu-overlay-col menu-overlay-col-sm">
             <div className="menu-items-header">
-              <p>Root</p>
+              <p>Pages</p>
             </div>
             <div className="menu-main-links">
               <Link
@@ -330,41 +330,41 @@ const Menu = () => {
                 className="menu-main-link"
                 onClick={handleLinkClick}
               >
-                <h4>Index</h4>
+                <h4>Home</h4>
               </Link>
               <Link
-                href="/wardrobe"
+                href="/shop"
                 className="menu-main-link"
                 onClick={handleLinkClick}
               >
-                <h4>Wardrobe</h4>
+                <h4>Shop</h4>
               </Link>
               <Link
-                href="/genesis"
+                href="/about"
                 className="menu-main-link"
                 onClick={handleLinkClick}
               >
-                <h4>Genesis</h4>
+                <h4>About</h4>
               </Link>
             </div>
           </div>
           <div className="menu-overlay-col menu-overlay-col-lg">
             <div className="menu-overlay-sub-col">
               <div className="menu-items-header">
-                <p>Subroutine</p>
+                <p>Explore</p>
               </div>
               <div className="menu-sub-links">
                 <Link href="/lookbook" onClick={handleLinkClick}>
                   Lookbook
                 </Link>
-                <Link href="/touchpoint" onClick={handleLinkClick}>
-                  Touchpoint
+                <Link href="/contact" onClick={handleLinkClick}>
+                  Contact
                 </Link>
               </div>
             </div>
             <div className="menu-overlay-sub-col">
               <div className="menu-items-header">
-                <p>Field Tests</p>
+                <p>Categories</p>
               </div>
               <div className="menu-sub-links menu-product-links">
                 <Link href="/product/essentials" onClick={handleLinkClick}>
@@ -386,17 +386,17 @@ const Menu = () => {
         <div className="menu-overlay-footer">
           <div className="menu-social">
             <a
-              href="https://x.com/rcommerce"
+              href="https://www.rickshowcase.com"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
             >
-              Twitter
+              Website
             </a>
           </div>
           <div className="menu-social">
             <a
-              href="https://www.instagram.com/rcommerce/"
+              href="https://www.instagram.com/rickshowcaseig/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
@@ -406,7 +406,7 @@ const Menu = () => {
           </div>
           <div className="menu-social">
             <a
-              href="https://www.youtube.com/@rcommerce"
+              href="https://www.youtube.com/@rickshowcaseyt"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
