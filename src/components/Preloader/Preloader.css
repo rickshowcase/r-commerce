@@ -80,7 +80,7 @@
   will-change: transform;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .preloader-progress-bar {
     left: 0%;
     width: 100%;

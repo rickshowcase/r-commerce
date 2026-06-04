@@ -60,7 +60,7 @@ const CTA = () => {
       <div className="container">
         <div className="cta-col">
           <div className="cta-side-img">
-            <img src="/cta/cta_img_01.jpg" alt="" />
+            <img src="/cta/cta_img_01.webp" alt="" />
           </div>
           <div className="cta-col-copy">
             <Copy>
@@ -78,12 +78,12 @@ const CTA = () => {
             </Copy>
           </div>
           <div className="cta-main-img">
-            <img src="/cta/cta_img_02.jpg" alt="" />
+            <img src="/cta/cta_img_02.webp" alt="" />
           </div>
         </div>
         <div className="cta-col">
           <div className="cta-side-img">
-            <img src="/cta/cta_img_03.jpg" alt="" />
+            <img src="/cta/cta_img_03.webp" alt="" />
           </div>
         </div>
       </div>

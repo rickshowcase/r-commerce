@@ -37,7 +37,9 @@
   margin-top: -4rem;
   z-index: -1;
   border-radius: 0.75rem;
+  background-color: var(--base-200);
 }
+
 
 .cta .container .cta-col:nth-child(1) {
   display: flex;
@@ -55,7 +57,9 @@
   overflow: hidden;
   border-radius: 0.75rem;
   height: 20rem;
+  background-color: var(--base-200);
 }
+
 
 .cta .container .cta-col:nth-child(3) {
   display: flex;
@@ -68,6 +72,7 @@
   overflow: hidden;
   border-radius: 0.75rem;
   height: 20rem;
+  background-color: var(--base-200);
 }
 
 .cta .container:nth-child(2) {

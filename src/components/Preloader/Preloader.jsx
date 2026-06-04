@@ -8,15 +8,17 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(SplitText);
 
+const SESSION_KEY = "rcommerce_visited";
+
 const Preloader = () => {
   const [showPreloader, setShowPreloader] = useState(true);
   const [loaderAnimating, setLoaderAnimating] = useState(true);
   const wrapperRef = useRef(null);
   const lenis = useLenis();
 
-  // useLayoutEffect runs before paint — no visible flash when skipping
+  // Skip preloader if this session has already seen it (covers refresh + SPA nav)
   useLayoutEffect(() => {
-    if (window.__appStarted) {
+    if (sessionStorage.getItem(SESSION_KEY)) {
       setShowPreloader(false);
       setLoaderAnimating(false);
     }
@@ -76,10 +78,9 @@ const Preloader = () => {
         const tl = gsap.timeline({
           delay: 0.5,
           onComplete: () => {
+            sessionStorage.setItem(SESSION_KEY, "true");
             setLoaderAnimating(false);
-            setTimeout(() => {
-              setShowPreloader(false);
-            }, 100);
+            setTimeout(() => setShowPreloader(false), 100);
           },
         });
 

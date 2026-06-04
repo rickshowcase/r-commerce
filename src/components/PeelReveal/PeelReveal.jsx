@@ -71,8 +71,7 @@ const PeelReveal = () => {
             maskLayers.forEach((layer, i) => {
               const initialScale = 0.9 - i * 0.2;
               const layerProgress = Math.min(progress / 0.9, 1);
-              const currentScale =
-                initialScale + layerProgress * (1 - initialScale);
+              const currentScale = initialScale + layerProgress * (1 - initialScale);
               gsap.set(layer, { scale: currentScale });
             });
 
@@ -139,25 +138,25 @@ const PeelReveal = () => {
         </div>
         <div className="peel-reveal-img-container">
           <div className="pr-img">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="Peel reveal" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="Peel reveal" />
           </div>
           <div className="pr-img mask">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="" />
           </div>
           <div className="pr-img mask">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="" />
           </div>
           <div className="pr-img mask">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="" />
           </div>
           <div className="pr-img mask">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="" />
           </div>
           <div className="pr-img mask">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="" />
           </div>
           <div className="pr-img mask">
-            <img src="/peel-reveal/peel-reveal-img.jpg" alt="" />
+            <img src="/peel-reveal/peel-reveal-img.webp" alt="" />
           </div>
           <div className="peel-reveal-header">
             <h1>The uniform holds no allegiance</h1>

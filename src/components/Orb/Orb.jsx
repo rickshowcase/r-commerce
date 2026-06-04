@@ -113,7 +113,7 @@ const Orb = ({
     const textureLoader = new THREE.TextureLoader();
 
     const getRandomImagePath = () =>
-      `/lookbook/orb_img_${Math.floor(Math.random() * totalImages) + 1}.jpg`;
+      `/lookbook/orb_img_${Math.floor(Math.random() * totalImages) + 1}.webp`;
 
     const loadImageMesh = (phi, theta) => {
       textureLoader.load(

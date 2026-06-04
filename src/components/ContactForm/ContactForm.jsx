@@ -126,7 +126,7 @@ const ContactForm = () => {
     <section className="contact-form">
       <div className="contact-parallax-image-wrapper">
         <h1>R Commerce</h1>
-        <img src="/contact-form/contact-parallax.png" alt="" />
+        <img src="/contact-form/contact-parallax.webp" alt="" />
       </div>
       <div className="contact-form-container">
         <div className="cf-header">

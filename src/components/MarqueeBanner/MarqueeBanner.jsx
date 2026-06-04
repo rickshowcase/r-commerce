@@ -55,7 +55,7 @@ const MarqueeBanner = () => {
           </Copy>
         </div>
         <div className="banner-img">
-          <img src="/marquee-banner/marquee_banner_01.png" alt="" />
+          <img src="/marquee-banner/marquee_banner_01.webp" alt="" />
         </div>
         <div className="banner-logo">
           <h5>R Commerce</h5>

@@ -47,31 +47,31 @@ const productPages = {
   },
   "streetwear-01": {
     tag: "Streetwear", title: "Streetwear - 01", price: "$175",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description: "Oversized shell with exaggerated proportions and raw-edge finishing — built for presence in high-density environments where silhouette is signal.",
     construction: "Heavy canvas outer with unfinished hem detail. Dropped sleeve construction for unrestricted arm movement.",
   },
   "streetwear-02": {
     tag: "Streetwear", title: "Streetwear - 02", price: "$165",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description: "Wide-leg cargo form with multi-pocket architecture and reinforced stress zones — functional volume translated into street-ready structure.",
     construction: "Durable cotton-nylon blend with bar-tack reinforcement at all pocket openings and stress points.",
   },
   "streetwear-03": {
     tag: "Streetwear", title: "Streetwear - 03", price: "$160",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description: "Heavyweight layered hood with internal drawcord routing and forward-seam construction — engineered warmth with a confrontational silhouette.",
     construction: "Loopback fleece with bonded hood brim and internal cord channel. Double-stitched front seam for structural integrity.",
   },
   "streetwear-04": {
     tag: "Streetwear", title: "Streetwear - 04", price: "$158",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description: "Drop-shoulder cut with extended body length and minimal branding — the quiet uniform of anonymous movement through urban space.",
     construction: "Garment-dyed heavyweight cotton with enzyme wash finish. Extended hem with side-split detailing.",
   },
   "streetwear-05": {
     tag: "Streetwear", title: "Streetwear - 05", price: "$168",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description: "Technical bomber with bonded seam construction and concealed utility pockets — compact and clean, designed for rapid transition between environments.",
     construction: "Nylon taffeta outer with bonded lining and heat-sealed seams. Ribbed cuffs and hem with internal pocket system.",
   },
@@ -188,7 +188,7 @@ export default function ProductPage({ params }) {
     ScrollTrigger.create({
       trigger: heroRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 5}`,
+      end: `+=${window.innerHeight * 4}`,
       pin: true,
       pinSpacing: true,
       scrub: 1,
@@ -225,17 +225,17 @@ export default function ProductPage({ params }) {
     <>
       <section className="product-hero" ref={heroRef}>
         <div className="product-hero-col product-snapshots">
-          <div className="product-snapshot"><img src="/product/product_shot_01.jpg" alt="" /></div>
-          <div className="product-snapshot"><img src="/product/product_shot_02.jpg" alt="" /></div>
-          <div className="product-snapshot"><img src="/product/product_shot_03.jpg" alt="" /></div>
-          <div className="product-snapshot"><img src="/product/product_shot_04.jpg" alt="" /></div>
-          <div className="product-snapshot"><img src="/product/product_shot_05.jpg" alt="" /></div>
+          <div className="product-snapshot"><img src="/product/product_shot_01.webp" alt="" /></div>
+          <div className="product-snapshot"><img src="/product/product_shot_02.webp" alt="" /></div>
+          <div className="product-snapshot"><img src="/product/product_shot_03.webp" alt="" /></div>
+          <div className="product-snapshot"><img src="/product/product_shot_04.webp" alt="" /></div>
+          <div className="product-snapshot"><img src="/product/product_shot_05.webp" alt="" /></div>
           <div className="product-snapshot-minimap">
-            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_01.jpg" alt="" /></div>
-            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_02.jpg" alt="" /></div>
-            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_03.jpg" alt="" /></div>
-            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_04.jpg" alt="" /></div>
-            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_05.jpg" alt="" /></div>
+            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_01.webp" alt="" /></div>
+            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_02.webp" alt="" /></div>
+            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_03.webp" alt="" /></div>
+            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_04.webp" alt="" /></div>
+            <div className="product-snapshot-minimap-img"><img src="/product/product_minimap_05.webp" alt="" /></div>
           </div>
         </div>
         <div className="product-hero-col product-meta">
@@ -291,13 +291,13 @@ export default function ProductPage({ params }) {
           </div>
         </div>
         <div className="product-col product-col-img">
-          <img src="/product/product_shot_03.jpg" alt="" />
+          <img src="/product/product_shot_03.webp" alt="" />
         </div>
       </section>
 
       <section className="product-details shipping-details">
         <div className="product-col product-col-img">
-          <img src="/product/product_shot_04.jpg" alt="" />
+          <img src="/product/product_shot_04.webp" alt="" />
         </div>
         <div className="product-col product-col-copy">
           <div className="product-col-copy-wrapper">

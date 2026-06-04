@@ -22,9 +22,8 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Index() {
-  // Computed once on mount — no state, no re-renders, no double useGSAP run
   const isInitialLoad = useRef(
-    typeof window === "undefined" || !window.__appStarted
+    typeof window !== "undefined" && !sessionStorage.getItem("rcommerce_visited")
   );
 
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -63,13 +62,12 @@ export default function Index() {
   return (
     <>
       <Preloader />
-
       <section className="hero" ref={heroSectionRef}>
         <DotMatrix
           color="#3a3a3a"
           dotSize={2}
           spacing={5}
-          opacity={0.7}
+          opacity={0.8}
           delay={isInitialLoad.current ? 6 : 1.125}
         />
         <div className="container">
@@ -80,21 +78,13 @@ export default function Index() {
           </div>
         </div>
         <div className="hero-img" ref={heroImgRef}>
-          <img src="/home/hero.png" alt="" />
+          <img src="/home/hero.webp" alt="" />
         </div>
         <div className="section-footer">
-          <Copy
-            type="flicker"
-            delay={isInitialLoad.current ? 7.5 : 0.65}
-            animateOnScroll={false}
-          >
+          <Copy type="flicker" delay={isInitialLoad.current ? 7.5 : 0.65} animateOnScroll={false}>
             <p>Dark Field</p>
           </Copy>
-          <Copy
-            type="flicker"
-            delay={isInitialLoad.current ? 7.5 : 0.65}
-            animateOnScroll={false}
-          >
+          <Copy type="flicker" delay={isInitialLoad.current ? 7.5 : 0.65} animateOnScroll={false}>
             <p>Form R.01</p>
           </Copy>
         </div>

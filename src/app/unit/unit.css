@@ -62,7 +62,7 @@
 .product-snapshot-minimap-img {
   width: 4rem;
   height: 5rem;
-  border: 0.75px solid var(--base-300);
+  border: 0.75px solid var(--base-500);
   transform-origin: bottom left;
   will-change: transform;
   border-radius: 0.375rem;

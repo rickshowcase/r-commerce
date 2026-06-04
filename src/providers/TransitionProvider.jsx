@@ -41,6 +41,7 @@ export default function TransitionProvider({ children }) {
     return () => window.removeEventListener("resize", createTransitionGrid);
   }, []);
 
+
   return (
     <TransitionRouter
       auto

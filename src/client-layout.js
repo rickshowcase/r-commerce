@@ -11,10 +11,6 @@ export default function ClientLayout({ children, footer }) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    window.__appStarted = true;
-  }, []);
-
-  useEffect(() => {
     const handleMouseDown = (e) => {
       const btn = e.target.closest("button");
       if (!btn || btn.dataset.noPress) return;

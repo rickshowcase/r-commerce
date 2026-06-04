@@ -42,8 +42,8 @@ export default function Touchpoint() {
         scrub: 1,
         onUpdate: (self) => {
           const progress = self.progress;
-          gsap.set(leftImage, { y: `${progress * 25}rem` });
-          gsap.set(rightImage, { y: `${-progress * 25}rem` });
+          gsap.set(leftImage, { y: `${progress * 30}rem` });
+          gsap.set(rightImage, { y: `${-progress * 30}rem` });
         },
       });
 
@@ -88,7 +88,7 @@ export default function Touchpoint() {
           </div>
           <div className="contact-hero-col contact-hero-img-wrapper">
             <div className="contact-hero-img" ref={contactHeroImgRef}>
-              <img src="/contact/hero.png" alt="" />
+              <img src="/contact/hero.webp" alt="" />
             </div>
           </div>
         </div>
@@ -96,10 +96,10 @@ export default function Touchpoint() {
 
       <section className="contact-callout" ref={calloutRef}>
         <div className="contact-callout-img contact-callout-img-left">
-          <img src="/contact/contact-callout.jpg" alt="" />
+          <img src="/contact/contact-callout.webp" alt="" />
         </div>
         <div className="contact-callout-img contact-callout-img-right">
-          <img src="/contact/contact-callout.jpg" alt="" />
+          <img src="/contact/contact-callout.webp" alt="" />
         </div>
         <div className="container">
           <div className="contact-callout-header">

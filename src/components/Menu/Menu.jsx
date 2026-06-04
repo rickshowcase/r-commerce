@@ -367,16 +367,16 @@ const Menu = () => {
                 <p>Categories</p>
               </div>
               <div className="menu-sub-links menu-product-links">
-                <Link href="/product/essentials" onClick={handleLinkClick}>
+                <Link href="/product/essentials-01" onClick={handleLinkClick}>
                   01. Essentials
                 </Link>
-                <Link href="/product/streetwear" onClick={handleLinkClick}>
+                <Link href="/product/streetwear-01" onClick={handleLinkClick}>
                   02. Streetwear
                 </Link>
-                <Link href="/product/outerwear" onClick={handleLinkClick}>
+                <Link href="/product/outerwear-01" onClick={handleLinkClick}>
                   03. Outerwear
                 </Link>
-                <Link href="/product/accessories" onClick={handleLinkClick}>
+                <Link href="/product/accessories-01" onClick={handleLinkClick}>
                   04. Accessories
                 </Link>
               </div>

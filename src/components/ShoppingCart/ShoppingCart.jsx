@@ -80,7 +80,7 @@ const ShoppingCart = () => {
                   <div key={item.cartId || `${item.name}-${index}`} className="cart-item">
                     <div className="cart-item-image">
                       <img
-                        src={`/products/product_${productIndex}.png`}
+                        src={`/products/product_${productIndex}.webp`}
                         alt={item.name}
                       />
                     </div>
