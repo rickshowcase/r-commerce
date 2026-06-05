@@ -57,10 +57,12 @@
 
 @media (max-width: 1024px) {
   .text-block {
-    height: 750px;
+    height: auto;
+    min-height: unset;
   }
+
   .text-block .container {
-    padding: 3rem 1.5rem;
+    padding: 6rem 1.5rem;
     flex-direction: column;
     gap: 2rem;
   }
@@ -71,10 +73,13 @@
 
   .text-block .container .text-block-col:first-child {
     flex-direction: column-reverse;
+    justify-content: flex-start;
+    gap: 3rem;
   }
 
   .text-block .container .text-block-col:nth-child(2) {
     display: inline-block;
+    width: 82%;
   }
 
   .text-block .container .text-block-col:nth-child(2) p {

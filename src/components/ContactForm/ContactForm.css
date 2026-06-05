@@ -135,7 +135,19 @@
 
 @media (max-width: 1024px) {
   .contact-form {
-    height: calc(80svh + 80svh);
+    height: auto;
+  }
+
+  .contact-form .contact-form-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 6rem 2rem 4rem;
+    justify-content: flex-start;
+    gap: 2.5rem;
   }
 
   .contact-form .cf-header,
@@ -146,12 +158,31 @@
   .contact-form .cf-footer .cf-footer-copy p {
     width: 75%;
   }
+}
+
+@media (max-width: 767px) {
+  .contact-form {
+    height: auto;
+  }
 
   .contact-form .contact-form-container {
-    top: 80svh;
-    border-radius: 0;
-    width: 100%;
+    position: relative;
+    top: 0;
     right: 0;
-    padding: 5rem 2rem;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    padding: 3rem 1.5rem;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .contact-form .cf-header,
+  .contact-form .cf-copy p {
+    width: 100%;
+  }
+
+  .contact-form .cf-footer .cf-footer-copy p {
+    width: 90%;
   }
 }

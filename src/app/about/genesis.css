@@ -129,16 +129,76 @@
 }
 
 @media (max-width: 1024px) {
-  .genesis-hero .container .gen-hero-copy:nth-child(3) h1,
-  .genesis-about .container .genesis-about-copy {
-    width: 100%;
+  .genesis-hero {
+    height: 100svh;
   }
 
   .genesis-hero .container {
-    padding: 10rem 1.5rem;
+    padding: 7rem 1.5rem 4rem;
+  }
+
+  .genesis-hero .container .gen-hero-copy:nth-child(3) h1 {
+    width: 90%;
+  }
+
+  .genesis-hero .container .gen-hero-copy:nth-child(3) .gen-hero-meta {
+    padding-bottom: 2rem;
+  }
+
+  .genesis-about {
+    padding: 6rem 0 4rem;
+  }
+
+  .genesis-about .container .genesis-about-logo {
+    display: none;
+  }
+
+  .genesis-about .container .genesis-about-copy {
+    width: 90%;
+  }
+
+  .project-preview {
+    clip-path: inset(0);
   }
 
   .project-preview .project-preview-wrapper {
-    width: 250%;
+    position: absolute !important;
+    width: 40% !important;
+    height: 40svh !important;
+    overflow: hidden !important;
+    display: block !important;
+    clip-path: inset(0 0 0 0 round 0.75rem);
+  }
+
+  .project-preview .project-preview-wrapper .preview-col:not(.main-preview-col) {
+    display: none !important;
+  }
+
+  .project-preview .project-preview-wrapper .preview-col.main-preview-col {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+  }
+
+  .project-preview .project-preview-wrapper .main-preview-col .preview-img:not(.main-preview-img) {
+    display: none !important;
+  }
+
+  .project-preview .project-preview-wrapper .main-preview-img {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .project-preview .project-preview-wrapper .main-preview-img img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 }

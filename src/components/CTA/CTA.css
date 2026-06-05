@@ -97,6 +97,10 @@
 }
 
 @media (max-width: 1024px) {
+  .cta {
+    padding: 4rem 0;
+  }
+
   .cta .container .cta-col:nth-child(2) .cta-header {
     width: 90%;
   }

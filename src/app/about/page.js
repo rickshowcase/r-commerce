@@ -37,7 +37,8 @@ export default function Genesis() {
             return;
 
           const previewScreenWidth = window.innerWidth;
-          const previewMaxScale = previewScreenWidth < 900 ? 4 : 2.65;
+          const previewMaxScale = previewScreenWidth < 1024 ? 1.5 : 2.65;
+          const isMobilePreview = previewScreenWidth < 1024;
 
           const scale = 1 + self.progress * previewMaxScale;
           const yPreviewColTranslate = self.progress * 300;
@@ -45,9 +46,11 @@ export default function Genesis() {
 
           projectPreviewWrapper.style.transform = `translate(-50%, -50%) scale(${scale})`;
 
-          previewCols.forEach((previewCol) => {
-            previewCol.style.transform = `translateY(${yPreviewColTranslate}px)`;
-          });
+          if (!isMobilePreview) {
+            previewCols.forEach((previewCol) => {
+              previewCol.style.transform = `translateY(${yPreviewColTranslate}px)`;
+            });
+          }
 
           mainPreviewImg.style.transform = `scale(${mainPreviewImgScale})`;
         },

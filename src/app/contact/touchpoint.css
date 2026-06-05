@@ -111,14 +111,44 @@
 
 @media (max-width: 1024px) {
   .contact-hero .container .contact-hero-col.contact-hero-img-wrapper {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+    width: 60%;
+    height: 90%;
+    flex: none;
+    z-index: 0;
+  }
+
+  .contact-hero .contact-hero-copy {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-hero .contact-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .contact-callout .contact-callout-img-left {
+    left: 1.5rem;
+    z-index: 0;
+  }
+
+  .contact-callout .contact-callout-img-right {
+    right: 1.5rem;
+    z-index: 0;
+  }
+
+  .contact-callout .container {
+    position: relative;
+    z-index: 2;
+    padding: 5rem 2rem 3rem;
   }
 
   .contact-callout .container .contact-callout-header p {
     width: 80%;
-  }
-
-  .contact-callout .container {
-    padding: 8rem 2rem 3rem;
   }
 }

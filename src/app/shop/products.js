@@ -4,7 +4,6 @@ export const products = [
     name: "Essentials - 01",
     slug: "essentials-01",
     price: "145",
-    color: "Black",
     tag: "Essentials",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -14,7 +13,6 @@ export const products = [
     name: "Essentials - 02",
     slug: "essentials-02",
     price: "140",
-    color: "Stone",
     tag: "Essentials",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -24,7 +22,6 @@ export const products = [
     name: "Essentials - 03",
     slug: "essentials-03",
     price: "130",
-    color: "Ice",
     tag: "Essentials",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -34,7 +31,6 @@ export const products = [
     name: "Essentials - 04",
     slug: "essentials-04",
     price: "135",
-    color: "Grey",
     tag: "Essentials",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -44,7 +40,6 @@ export const products = [
     name: "Essentials - 05",
     slug: "essentials-05",
     price: "125",
-    color: "White",
     tag: "Essentials",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -56,7 +51,6 @@ export const products = [
     name: "Streetwear - 01",
     slug: "streetwear-01",
     price: "175",
-    color: "Black",
     tag: "Streetwear",
     sizes: ["S", "M", "L", "XL"],
     description:
@@ -66,7 +60,6 @@ export const products = [
     name: "Streetwear - 02",
     slug: "streetwear-02",
     price: "165",
-    color: "Stone",
     tag: "Streetwear",
     sizes: ["S", "M", "L", "XL"],
     description:
@@ -76,7 +69,6 @@ export const products = [
     name: "Streetwear - 03",
     slug: "streetwear-03",
     price: "160",
-    color: "Ice",
     tag: "Streetwear",
     sizes: ["S", "M", "L", "XL"],
     description:
@@ -86,7 +78,6 @@ export const products = [
     name: "Streetwear - 04",
     slug: "streetwear-04",
     price: "158",
-    color: "Grey",
     tag: "Streetwear",
     sizes: ["S", "M", "L", "XL"],
     description:
@@ -96,7 +87,6 @@ export const products = [
     name: "Streetwear - 05",
     slug: "streetwear-05",
     price: "168",
-    color: "White",
     tag: "Streetwear",
     sizes: ["S", "M", "L", "XL"],
     description:
@@ -108,7 +98,6 @@ export const products = [
     name: "Outerwear - 01",
     slug: "outerwear-01",
     price: "195",
-    color: "Black",
     tag: "Outerwear",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -118,7 +107,6 @@ export const products = [
     name: "Outerwear - 02",
     slug: "outerwear-02",
     price: "185",
-    color: "Stone",
     tag: "Outerwear",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -128,7 +116,6 @@ export const products = [
     name: "Outerwear - 03",
     slug: "outerwear-03",
     price: "190",
-    color: "Ice",
     tag: "Outerwear",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -138,7 +125,6 @@ export const products = [
     name: "Outerwear - 04",
     slug: "outerwear-04",
     price: "180",
-    color: "Grey",
     tag: "Outerwear",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -148,7 +134,6 @@ export const products = [
     name: "Outerwear - 05",
     slug: "outerwear-05",
     price: "185",
-    color: "White",
     tag: "Outerwear",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -160,7 +145,6 @@ export const products = [
     name: "Accessories - 01",
     slug: "accessories-01",
     price: "155",
-    color: "Black",
     tag: "Accessories",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -170,7 +154,6 @@ export const products = [
     name: "Accessories - 02",
     slug: "accessories-02",
     price: "148",
-    color: "Stone",
     tag: "Accessories",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -180,7 +163,6 @@ export const products = [
     name: "Accessories - 03",
     slug: "accessories-03",
     price: "152",
-    color: "Ice",
     tag: "Accessories",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -190,7 +172,6 @@ export const products = [
     name: "Accessories - 04",
     slug: "accessories-04",
     price: "145",
-    color: "Grey",
     tag: "Accessories",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
@@ -200,7 +181,6 @@ export const products = [
     name: "Accessories - 05",
     slug: "accessories-05",
     price: "150",
-    color: "White",
     tag: "Accessories",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
