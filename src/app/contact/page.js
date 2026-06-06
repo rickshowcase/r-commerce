@@ -32,7 +32,9 @@ export default function Touchpoint() {
     if (!container) return;
 
     const isMobile = window.innerWidth <= 767;
-    const yDist = isMobile ? 7 : 12;
+    if (isMobile) return;
+
+    const yDist = 12;
 
     const leftImage = container.querySelector(".contact-callout-img-left");
     const rightImage = container.querySelector(".contact-callout-img-right");

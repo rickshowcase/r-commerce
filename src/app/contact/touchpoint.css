@@ -174,21 +174,13 @@
     transform: translateY(0) scale(1);
   }
 
-  .contact-callout .contact-callout-img-right {
+  .contact-callout .contact-callout-img-right,
+  .contact-callout .contact-callout-img-left {
     display: none;
   }
 
   .contact-callout {
     min-height: 36rem;
-  }
-
-  .contact-callout .contact-callout-img-left {
-    width: 11rem;
-    height: 15rem;
-    left: 50%;
-    top: 50%;
-    margin-top: -7.5rem;
-    margin-left: -5.5rem;
   }
 
   .contact-callout .container {
