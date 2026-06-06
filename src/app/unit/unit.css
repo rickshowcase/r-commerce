@@ -294,6 +294,22 @@
 }
 
 @media (max-width: 767px) {
+  .product-meta-container {
+    padding: 5rem 1.5rem;
+  }
+
+  .product-meta-header-divider {
+    margin-bottom: 0;
+  }
+
+  .product-col-copy-wrapper {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .related-products {
+    padding-top: 0;
+  }
+
   .related-products-container .container {
     grid-template-columns: 1fr;
   }

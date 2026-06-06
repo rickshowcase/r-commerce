@@ -87,13 +87,18 @@
 }
 
 .contact-callout .contact-callout-img-left {
-  top: 3rem;
+  top: 15%;
   left: 14rem;
 }
 
 .contact-callout .contact-callout-img-right {
-  bottom: 3rem;
+  top: auto;
+  bottom: 25%;
   right: 14rem;
+}
+
+.contact-callout .contact-callout-img-right img {
+  transform: scaleX(-1);
 }
 
 .contact-callout .container {
@@ -162,5 +167,38 @@
 
   .contact-hero .container .contact-hero-img {
     transform: translateY(0) scale(1);
+  }
+
+  .contact-callout .contact-callout-img-right {
+    display: none;
+  }
+
+  .contact-callout {
+    min-height: 36rem;
+  }
+
+  .contact-callout .contact-callout-img-left {
+    width: 11rem;
+    height: 15rem;
+    left: 50%;
+    top: -2rem;
+    margin-left: -5.5rem;
+  }
+
+  .contact-callout .container {
+    padding: 9rem 2rem 9rem;
+  }
+
+  .contact-callout .container .contact-callout-header {
+    width: 95%;
+    gap: 1rem;
+  }
+
+  .contact-callout .container .contact-callout-header p {
+    width: 90%;
+  }
+
+  .contact-callout p {
+    color: var(--base-700);
   }
 }
