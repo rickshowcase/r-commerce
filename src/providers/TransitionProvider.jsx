@@ -46,7 +46,7 @@ export default function TransitionProvider({ children }) {
     <TransitionRouter
       auto
       leave={(next) => {
-        gsap.set(blocksRef.current, { scaleX: 0, transformOrigin: "left" });
+        gsap.set(blocksRef.current, { scaleX: 0, transformOrigin: "left", autoAlpha: 1 });
         const tween = gsap.to(blocksRef.current, {
           scaleX: 1,
           duration: 0.5,
@@ -64,7 +64,10 @@ export default function TransitionProvider({ children }) {
           delay: 0.5,
           ease: "power3.out",
           stagger: { amount: 0.3, from: "start" },
-          onComplete: next,
+          onComplete: () => {
+            gsap.set(blocksRef.current, { autoAlpha: 0 });
+            next();
+          },
         });
         return () => tween.kill();
       }}

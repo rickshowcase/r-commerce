@@ -225,6 +225,7 @@ button.secondary {
   top: 0;
   background-color: var(--base-500);
   transform-origin: left;
+  visibility: hidden;
 }
 
 @media (max-width: 1024px) {

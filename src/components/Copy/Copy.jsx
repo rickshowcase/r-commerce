@@ -82,7 +82,7 @@ export default function Copy({
             allLines.push(...split.lines);
           });
 
-          gsap.set(allLines, { y: "100%" });
+          gsap.set(allLines, { y: "110%" });
 
           if (animateOnScroll) {
             gsap.set(containerRef.current, { visibility: "visible", opacity: 0 });
