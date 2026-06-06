@@ -172,7 +172,7 @@
     width: 100%;
     height: auto;
     border-radius: 0;
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem 3rem;
     justify-content: flex-start;
     gap: 2rem;
   }
@@ -188,7 +188,7 @@
   .contact-form .cf-submit {
     width: 4.5rem;
     height: 4.5rem;
-    margin-top: 0.25rem;
+    margin-top: 1.5rem;
   }
 
   .contact-form .cf-footer .cf-footer-copy p {

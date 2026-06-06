@@ -20,6 +20,7 @@ const Menu = () => {
   const splitTextsRef = useRef([]);
   const mainLinkSplitsRef = useRef([]);
   const lastScrollY = useRef(0);
+  const isAnimatingRef = useRef(false);
   const linkClickTimerRef = useRef(null);
 
   const scrambleText = (elements, duration = 0.4) => {
@@ -52,6 +53,8 @@ const Menu = () => {
   const openMenu = () => {
     setIsOpen(true);
     setIsAnimating(true);
+    isAnimatingRef.current = true;
+    document.body.setAttribute("data-menu-open", "true");
 
     if (hamburgerRef.current) {
       hamburgerRef.current.classList.add("open");
@@ -60,6 +63,7 @@ const Menu = () => {
     const tl = gsap.timeline({
       onComplete: () => {
         setIsAnimating(false);
+        isAnimatingRef.current = false;
       },
     });
 
@@ -114,14 +118,17 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    const handler = () => { if (isOpen) handleLinkClick(); };
+    const handler = () => { if (isOpen && !isAnimatingRef.current) closeMenu(); };
     window.addEventListener("menu:close", handler);
     return () => window.removeEventListener("menu:close", handler);
   }, [isOpen]);
 
+
   const closeMenu = () => {
     setIsOpen(false);
     setIsAnimating(true);
+    isAnimatingRef.current = true;
+    document.body.removeAttribute("data-menu-open");
 
     if (hamburgerRef.current) {
       hamburgerRef.current.classList.remove("open");
@@ -130,6 +137,7 @@ const Menu = () => {
     const tl = gsap.timeline({
       onComplete: () => {
         setIsAnimating(false);
+        isAnimatingRef.current = false;
       },
     });
 
@@ -203,7 +211,10 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    return () => { if (linkClickTimerRef.current) clearTimeout(linkClickTimerRef.current); };
+    return () => {
+      if (linkClickTimerRef.current) clearTimeout(linkClickTimerRef.current);
+      document.body.removeAttribute("data-menu-open");
+    };
   }, []);
 
   useEffect(() => {
@@ -305,6 +316,8 @@ const Menu = () => {
   }, [isOpen, isMenuVisible, isMobile]);
 
   return (
+    <>
+    {isOpen && <div className="menu-backdrop" onClick={() => !isAnimating && closeMenu()} />}
     <nav className="menu" ref={menuRef}>
       <div className="menu-header" onClick={toggleMenu}>
         <Link href="/" onClick={(e) => { e.stopPropagation(); handleLinkClick(); }}>
@@ -417,6 +430,7 @@ const Menu = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 

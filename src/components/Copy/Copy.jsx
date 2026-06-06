@@ -85,9 +85,9 @@ export default function Copy({
           gsap.set(allLines, { y: "100%" });
 
           if (animateOnScroll) {
-            gsap.set(containerRef.current, { visibility: "visible" });
+            gsap.set(containerRef.current, { visibility: "visible", opacity: 0 });
           } else {
-            gsap.to(containerRef.current, { visibility: "visible", duration: 0, delay: delay });
+            gsap.to(containerRef.current, { visibility: "visible", opacity: 1, duration: 0, delay: delay });
           }
 
           const animation = gsap.to(allLines, {
@@ -103,9 +103,12 @@ export default function Copy({
             ScrollTrigger.create({
               trigger: containerRef.current,
               start: "top 80%",
-              animation: animation,
               once: true,
               refreshPriority: -1,
+              onEnter: () => {
+                gsap.set(containerRef.current, { opacity: 1 });
+                animation.play();
+              },
             });
           }
         } else if (type === "flicker") {

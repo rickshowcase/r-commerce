@@ -42,8 +42,8 @@ export default function Touchpoint() {
         scrub: 1,
         onUpdate: (self) => {
           const progress = self.progress;
-          gsap.set(leftImage, { y: `${progress * 18}rem` });
-          gsap.set(rightImage, { y: `${-progress * 18}rem` });
+          gsap.set(leftImage, { y: `${(progress - 0.5) * 18}rem` });
+          gsap.set(rightImage, { y: `${-(progress - 0.5) * 18}rem` });
         },
       });
 

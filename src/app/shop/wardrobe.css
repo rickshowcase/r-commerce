@@ -97,6 +97,10 @@
     grid-template-columns: 1fr;
   }
 
+  .products-header h1 {
+    margin-bottom: 1rem;
+  }
+
   .products-header .filter-bar-tags {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

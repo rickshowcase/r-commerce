@@ -13,6 +13,10 @@ const ShoppingCart = () => {
   const subtotal = useCartSubtotal();
 
   const toggleCart = () => {
+    if (document.body.hasAttribute("data-menu-open")) {
+      window.dispatchEvent(new CustomEvent("menu:close"));
+      return;
+    }
     setIsOpen(!isOpen);
   };
 

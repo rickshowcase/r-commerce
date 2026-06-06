@@ -159,6 +159,10 @@
 }
 
 @media (max-width: 767px) {
+  .contact-hero .contact-meta {
+    gap: 1.5rem;
+  }
+
   .contact-hero .container .contact-hero-col.contact-hero-img-wrapper {
     width: 78%;
     height: 90%;
@@ -181,7 +185,7 @@
     width: 11rem;
     height: 15rem;
     left: 50%;
-    top: -2rem;
+    top: calc(50% - 7.5rem);
     margin-left: -5.5rem;
   }
 

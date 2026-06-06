@@ -205,6 +205,6 @@
 
 @media (max-width: 767px) {
   .genesis-hero .gen-hero-meta .gen-hero-meta-block:first-child {
-    transform: translateY(4.1rem);
+    transform: translateY(3.75rem);
   }
 }
