@@ -42,7 +42,7 @@ const Orb = ({
       1000
     );
     const isMobile = window.innerWidth <= 767;
-    camera.position.z = isMobile ? 11 : 10;
+    camera.position.z = isMobile ? 14 : 10;
 
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
@@ -63,7 +63,7 @@ const Orb = ({
     controls.dampingFactor = 0.05;
     controls.rotateSpeed = 1.2;
     controls.minDistance = isMobile ? 6 : 6;
-    controls.maxDistance = isMobile ? 11 : 10;
+    controls.maxDistance = isMobile ? 14 : 10;
     controls.enableZoom = true;
     controls.enablePan = false;
 

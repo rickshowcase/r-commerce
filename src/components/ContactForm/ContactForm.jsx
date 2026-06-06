@@ -17,7 +17,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     const btn = submitRef.current;
-    if (!btn || window.matchMedia("(pointer: coarse)").matches) return;
+    if (!btn || window.matchMedia("(pointer: coarse)").matches || window.innerWidth <= 1024) return;
 
     let active = false;
     let snapping = false;

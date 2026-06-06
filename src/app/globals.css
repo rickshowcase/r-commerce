@@ -234,3 +234,12 @@ button.secondary {
     padding: 1.5rem;
   }
 }
+
+@media (max-width: 767px) {
+  p.bodyCopy,
+  p.bodyCopy.sm,
+  p.bodyCopy.md,
+  p.bodyCopy.lg {
+    font-size: 1rem;
+  }
+}

@@ -86,3 +86,9 @@
     margin-bottom: 1rem;
   }
 }
+
+@media (max-width: 767px) {
+  .text-block .container .text-block-col:nth-child(2) {
+    width: 100%;
+  }
+}

@@ -89,7 +89,18 @@
 }
 
 @media (max-width: 767px) {
+  .product-list {
+    padding-top: 0;
+  }
+
   .product-list .container {
     grid-template-columns: 1fr;
+  }
+
+  .products-header .filter-bar-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
   }
 }

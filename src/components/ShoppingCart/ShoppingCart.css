@@ -313,3 +313,24 @@
     font-size: 0.95rem;
   }
 }
+
+@media (max-width: 767px) {
+  .shopping-cart-container .cart-close,
+  .shopping-cart-container .cart-item-name,
+  .shopping-cart-container .cart-item-quantity,
+  .shopping-cart-container .cart-item-price,
+  .shopping-cart-container .cart-summary-row,
+  .shopping-cart-container .cart-summary-row span,
+  .shopping-cart-container .cart-empty p,
+  .shopping-cart-container .cart-checkout {
+    font-size: 1rem;
+  }
+
+  .shopping-cart-container .cart-item-remove {
+    font-size: 0.8rem;
+  }
+
+  .shopping-cart-container .cart-item-meta {
+    font-size: 0.9rem;
+  }
+}

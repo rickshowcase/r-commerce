@@ -204,3 +204,10 @@
     font-size: 1.05rem;
   }
 }
+
+@media (max-width: 767px) {
+  .menu .menu-sub-links a,
+  .menu .menu-overlay-footer a {
+    font-size: 0.9rem;
+  }
+}

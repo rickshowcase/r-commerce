@@ -245,4 +245,16 @@
   .featured-products .featured-products-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .featured-products .featured-products-list > *:nth-child(4) {
+    display: block;
+  }
+
+  .featured-products .featured-products-list {
+    gap: 1.5rem;
+  }
+
+  .featured-products {
+    padding-bottom: 0rem;
+  }
 }

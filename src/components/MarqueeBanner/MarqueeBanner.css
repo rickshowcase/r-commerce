@@ -101,7 +101,7 @@
 @media (max-width: 767px) {
   .marquee-banner {
     height: auto;
-    padding: 4rem 1rem;
+    padding: 4rem 1rem 6rem;
   }
 
   .marquee-banner .marquees .marquee-header {
@@ -115,5 +115,9 @@
 
   .marquee-banner .banner .banner-img {
     top: 5rem;
+  }
+
+  .marquee-banner .marquees .marquee-header h1 {
+    white-space: nowrap;
   }
 }

@@ -177,9 +177,18 @@
     gap: 2rem;
   }
 
-  .contact-form .cf-header,
+  .contact-form .cf-header {
+    width: 75%;
+  }
+
   .contact-form .cf-copy p {
-    width: 100%;
+    width: 80%;
+  }
+
+  .contact-form .cf-submit {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-top: 0.25rem;
   }
 
   .contact-form .cf-footer .cf-footer-copy p {

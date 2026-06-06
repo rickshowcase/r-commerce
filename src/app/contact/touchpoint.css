@@ -152,3 +152,15 @@
     width: 80%;
   }
 }
+
+@media (max-width: 767px) {
+  .contact-hero .container .contact-hero-col.contact-hero-img-wrapper {
+    width: 78%;
+    height: 90%;
+    right: -1.5rem;
+  }
+
+  .contact-hero .container .contact-hero-img {
+    transform: translateY(0) scale(1);
+  }
+}
