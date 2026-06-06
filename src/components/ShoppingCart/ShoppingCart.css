@@ -6,7 +6,7 @@
   height: 100svh;
   padding: 2rem;
   pointer-events: none;
-  z-index: 110;
+  z-index: 50;
 }
 
 .shopping-cart-container .cart-button {

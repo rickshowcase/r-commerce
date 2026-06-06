@@ -87,13 +87,14 @@
 }
 
 .contact-callout .contact-callout-img-left {
-  top: 15%;
+  top: 50%;
+  margin-top: -10rem;
   left: 14rem;
 }
 
 .contact-callout .contact-callout-img-right {
-  top: auto;
-  bottom: 25%;
+  top: 50%;
+  margin-top: -10rem;
   right: 14rem;
 }
 
