@@ -1,6 +1,6 @@
 "use client";
 import "./touchpoint.css";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 import Copy from "@/components/Copy/Copy";
 import BrandIcon from "@/components/BrandIcon/BrandIcon";
@@ -27,35 +27,40 @@ export default function Touchpoint() {
     });
   });
 
-  useEffect(() => {
+  useGSAP(() => {
     const container = calloutRef.current;
     if (!container) return;
 
-    const timer = setTimeout(() => {
-      const leftImage = container.querySelector(".contact-callout-img-left");
-      const rightImage = container.querySelector(".contact-callout-img-right");
+    const isMobile = window.innerWidth <= 767;
+    const yDist = isMobile ? 7 : 12;
 
-      const st = ScrollTrigger.create({
-        trigger: container,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1,
-        onUpdate: (self) => {
-          const progress = self.progress;
-          gsap.set(leftImage, { y: `${(progress - 0.5) * 18}rem` });
-          gsap.set(rightImage, { y: `${-(progress - 0.5) * 18}rem` });
-        },
-      });
+    const leftImage = container.querySelector(".contact-callout-img-left");
+    const rightImage = container.querySelector(".contact-callout-img-right");
 
-      return () => {
-        st.kill();
-      };
-    }, 500);
+    if (leftImage) {
+      gsap.fromTo(leftImage,
+        { y: `${-yDist}rem` },
+        { y: `${yDist}rem`, ease: "none", scrollTrigger: {
+          trigger: container,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        }}
+      );
+    }
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
+    if (rightImage) {
+      gsap.fromTo(rightImage,
+        { y: `${yDist}rem` },
+        { y: `${-yDist}rem`, ease: "none", scrollTrigger: {
+          trigger: container,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        }}
+      );
+    }
+  });
 
   return (
     <>

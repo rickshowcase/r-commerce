@@ -186,7 +186,8 @@
     width: 11rem;
     height: 15rem;
     left: 50%;
-    top: calc(50% - 7.5rem);
+    top: 50%;
+    margin-top: -7.5rem;
     margin-left: -5.5rem;
   }
 
