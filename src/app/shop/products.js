@@ -52,7 +52,7 @@ export const products = [
     slug: "streetwear-01",
     price: "175",
     tag: "Streetwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
       "Oversized shell with exaggerated proportions and raw-edge finishing — built for presence in high-density environments where silhouette is signal.",
   },
@@ -61,7 +61,7 @@ export const products = [
     slug: "streetwear-02",
     price: "165",
     tag: "Streetwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
       "Wide-leg cargo form with multi-pocket architecture and reinforced stress zones — functional volume translated into street-ready structure.",
   },
@@ -70,7 +70,7 @@ export const products = [
     slug: "streetwear-03",
     price: "160",
     tag: "Streetwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
       "Heavyweight layered hood with internal drawcord routing and forward-seam construction — engineered warmth with a confrontational silhouette.",
   },
@@ -79,7 +79,7 @@ export const products = [
     slug: "streetwear-04",
     price: "158",
     tag: "Streetwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
       "Drop-shoulder cut with extended body length and minimal branding — the quiet uniform of anonymous movement through urban space.",
   },
@@ -88,7 +88,7 @@ export const products = [
     slug: "streetwear-05",
     price: "168",
     tag: "Streetwear",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     description:
       "Technical bomber with bonded seam construction and concealed utility pockets — compact and clean, designed for rapid transition between environments.",
   },

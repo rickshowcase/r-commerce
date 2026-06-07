@@ -7,10 +7,17 @@ import { useCartStore, useCartCount, useCartSubtotal } from "@/store/cartStore";
 
 const ShoppingCart = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const cartItems = useCartStore((state) => state.cartItems);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
   const cartCount = useCartCount();
   const subtotal = useCartSubtotal();
+
+  // Cart state is restored from sessionStorage on the client only; gate the
+  // count badge until after mount so SSR and first client render match.
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleCart = () => {
     if (document.body.hasAttribute("data-menu-open")) {
@@ -35,7 +42,7 @@ const ShoppingCart = () => {
     <div className="shopping-cart-container">
       <button className="cart-button" onClick={toggleCart}>
         <span className="cart-icon">CART</span>
-        {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+        {mounted && cartCount > 0 && <span className="cart-count">{cartCount}</span>}
       </button>
 
       {isOpen && <div className="cart-backdrop" onClick={toggleCart} />}

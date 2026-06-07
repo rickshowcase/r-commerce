@@ -27,7 +27,9 @@ const Product = ({
         {showAddToCart && (
           <button
             className="add-to-cart-btn"
-            onClick={() => addToCart(product)}
+            onClick={() =>
+              addToCart({ ...product, selectedColor: "Stone", selectedSize: "M" })
+            }
           >
             Add to Cart
           </button>
