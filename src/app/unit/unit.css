@@ -245,7 +245,7 @@
   }
 
   .product-meta-container {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1.5rem 6rem;
     justify-content: flex-start;
   }
 
@@ -295,7 +295,7 @@
 
 @media (max-width: 767px) {
   .product-meta-container {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1.5rem 6rem;
   }
 
   .product-meta-header-divider {

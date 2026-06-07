@@ -1,21 +1,13 @@
-"use client";
-import "./lookbook.css";
+import { pageMetadata } from "@/lib/seo";
+import LookbookView from "./LookbookView";
 
-import Orb from "@/components/Orb/Orb";
-import Copy from "@/components/Copy/Copy";
+export const metadata = pageMetadata({
+  title: "Lookbook",
+  description:
+    "The R Commerce visual index — an interactive signal archive of campaign imagery exploring form, motion and silhouette.",
+  path: "/lookbook",
+});
 
-export default function Lookbook() {
-  return (
-    <section className="lookbook">
-      <div className="section-footer">
-        <Copy animateOnScroll={false} delay={0.65} type="flicker">
-          <p>[ Signal Archive ]</p>
-        </Copy>
-        <Copy animateOnScroll={false} delay={0.65} type="flicker">
-          <p>[ Visual Index ]</p>
-        </Copy>
-      </div>
-      <Orb />
-    </section>
-  );
+export default function Page() {
+  return <LookbookView />;
 }
