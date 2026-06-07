@@ -30,6 +30,11 @@ const dmMono = DM_Mono({
 export const metadata = {
   title: "R Commerce",
   description: "R Commerce — a premium e-commerce experience built with Next.js by Rick.",
+  icons: {
+    icon: "/site-icon.webp",
+    shortcut: "/site-icon.webp",
+    apple: "/site-icon.webp",
+  },
 };
 
 export default function RootLayout({ children }) {
