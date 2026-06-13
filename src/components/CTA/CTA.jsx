@@ -17,6 +17,11 @@ const CTA = () => {
     const container = ctaRef.current;
     if (!container) return;
 
+    // Holds the ScrollTrigger created inside the timeout so the cleanup below
+    // can kill it; otherwise the trigger leaks across page navigations and its
+    // scrub onUpdate keeps firing against detached targets.
+    let st;
+
     const timer = setTimeout(() => {
       const leftImage = container.querySelector(
         ".cta-col:nth-child(1) .cta-side-img"
@@ -25,7 +30,10 @@ const CTA = () => {
         ".cta-col:nth-child(3) .cta-side-img"
       );
 
-      const st = ScrollTrigger.create({
+      // Bail if the parallax images aren't in the DOM (avoids GSAP null targets).
+      if (!leftImage || !rightImage) return;
+
+      st = ScrollTrigger.create({
         trigger: container,
         start: "top bottom",
         end: "bottom top",
@@ -44,14 +52,11 @@ const CTA = () => {
           });
         },
       });
-
-      return () => {
-        st.kill();
-      };
     }, 500);
 
     return () => {
       clearTimeout(timer);
+      if (st) st.kill();
     };
   }, []);
 

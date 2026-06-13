@@ -224,6 +224,14 @@
   gap: 2rem;
 }
 
+/* Desktop only: increase top and bottom padding of the related section. */
+@media (min-width: 1025px) {
+  .related-products {
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .product-hero {
     flex-direction: column;

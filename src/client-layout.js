@@ -9,9 +9,13 @@ export default function ClientLayout({ children, footer }) {
   const pathname = usePathname();
 
   const [isMobile, setIsMobile] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
     const handleMouseDown = (e) => {
+      // Only the primary (left) button should trigger the press effect —
+      // ignore right-click (2) and middle-click (1).
+      if (e.button !== 0) return;
       const btn = e.target.closest("button");
       if (!btn || btn.dataset.noPress) return;
       btn.classList.remove("btn-press");
@@ -24,20 +28,21 @@ export default function ClientLayout({ children, footer }) {
   }, []);
 
   useEffect(() => {
-    const checkMobile = () => {
+    const checkDevice = () => {
       setIsMobile(window.innerWidth <= 1024);
+      setIsTouch(window.matchMedia("(pointer: coarse)").matches);
     };
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+    return () => window.removeEventListener("resize", checkDevice);
   }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const scrollSettings = isMobile
+  const baseSettings = isMobile
     ? {
         duration: 0.8,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -68,6 +73,13 @@ export default function ClientLayout({ children, footer }) {
         smoothWheel: true,
         syncTouch: true,
       };
+
+  // On touch devices, hand scrolling back to the browser. Lenis hijacking touch
+  // (syncTouch/smoothTouch) is what breaks iOS zoom-back and adds overhead with
+  // no benefit, since native momentum scrolling is already smooth on mobile.
+  const scrollSettings = isTouch
+    ? { ...baseSettings, smooth: false, smoothTouch: false, syncTouch: false }
+    : baseSettings;
 
   return (
     <ReactLenis root options={scrollSettings}>

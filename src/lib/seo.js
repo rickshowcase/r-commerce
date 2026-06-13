@@ -18,8 +18,50 @@ export const siteConfig = {
     "R Commerce is a premium technical-apparel label — essentials, streetwear, outerwear and accessories reduced to deliberate, functional form.",
   // Default social-share image (Open Graph / Twitter).
   ogImage: "/home/hero.webp",
+  ogImageType: "image/webp",
   locale: "en_US",
+  // Public contact + brand profiles, reused across structured data.
+  email: "info@rickshowcase.com",
+  // Profiles that establish brand identity for search/answer engines (sameAs).
+  sameAs: [
+    "https://www.instagram.com/rickshowcaseig/",
+    "https://www.youtube.com/@rickshowcaseyt",
+  ],
+  // Operating location, used in the Organization address.
+  address: {
+    city: "Markham",
+    region: "Ontario",
+    country: "CA",
+  },
 };
+
+// Organization structured data shared by the root layout and contact page.
+// Centralized so the brand identity (logo, profiles, contact) stays consistent.
+export function organizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: SITE_URL,
+    logo: `${SITE_URL}/site-icon.webp`,
+    description: siteConfig.description,
+    email: siteConfig.email,
+    sameAs: siteConfig.sameAs,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.region,
+      addressCountry: siteConfig.address.country,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: siteConfig.email,
+      areaServed: "Worldwide",
+      availableLanguage: ["English"],
+    },
+  };
+}
 
 // Builds a consistent Metadata object for a page. Relative paths are resolved to
 // absolute URLs via `metadataBase` (set in the root layout). Set
@@ -42,7 +84,7 @@ export function pageMetadata({
       description,
       url: path,
       locale: siteConfig.locale,
-      images: [{ url: image, alt: title }],
+      images: [{ url: image, alt: title, type: siteConfig.ogImageType }],
     },
     twitter: {
       card: "summary_large_image",

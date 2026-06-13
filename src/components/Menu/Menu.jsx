@@ -370,6 +370,9 @@ const Menu = () => {
                 <Link href="/lookbook" onClick={handleLinkClick}>
                   Lookbook
                 </Link>
+                <Link href="/faq" onClick={handleLinkClick}>
+                  FAQ
+                </Link>
                 <Link href="/contact" onClick={handleLinkClick}>
                   Contact
                 </Link>

@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Koulen, DM_Mono, Host_Grotesk } from "next/font/google";
 
-import { SITE_URL, siteConfig } from "@/lib/seo";
+import { SITE_URL, siteConfig, organizationJsonLd } from "@/lib/seo";
 import ClientLayout from "@/client-layout";
 
 import Menu from "@/components/Menu/Menu";
@@ -75,20 +75,19 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
+  // Search Console / Webmaster verification. Set these in the Vercel project
+  // env to claim the site; undefined values are omitted automatically.
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
   icons: {
     icon: "/site-icon.webp",
     shortcut: "/site-icon.webp",
     apple: "/site-icon.webp",
   },
-};
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: siteConfig.name,
-  url: SITE_URL,
-  logo: `${SITE_URL}/site-icon.webp`,
-  description: siteConfig.description,
 };
 
 const websiteJsonLd = {
@@ -106,7 +105,9 @@ export default function RootLayout({ children }) {
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd()),
+          }}
         />
         <script
           type="application/ld+json"

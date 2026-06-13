@@ -1,0 +1,148 @@
+/* FAQ page — mirrors the shop header spacing and the site's token system. */
+
+.faq-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 25svh;
+  overflow: hidden;
+}
+
+.faq-header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.faq-header-divider {
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--base-200);
+}
+
+.faq-header p {
+  color: var(--base-500);
+}
+
+.faq-list {
+  width: 100%;
+  padding: 2rem 0 8rem 0;
+}
+
+.faq-list .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  /* Hidden initially; revealed by the staggered GSAP animation in FaqView. */
+  opacity: 0;
+  border-bottom: 1px solid var(--base-300);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--base-300);
+}
+
+/* Reset the global button styling so the question reads as a full-width row. */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.25rem 0;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question h4 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--base-700);
+  transition: color 300ms ease-in-out;
+}
+
+.faq-item.open .faq-question h4 {
+  color: var(--accent);
+}
+
+.faq-indicator {
+  flex-shrink: 0;
+  font-family: var(--font-koulen), sans-serif;
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  line-height: 1;
+  color: var(--base-500);
+  transition: color 300ms ease-in-out;
+}
+
+.faq-item.open .faq-indicator {
+  color: var(--accent);
+}
+
+/* Hover styles only where a real pointer can hover — avoids sticky-hover on
+   touch devices, where a tap would otherwise leave the accent color stuck. */
+@media (hover: hover) {
+  .faq-question:hover h4,
+  .faq-question:hover .faq-indicator {
+    color: var(--accent);
+  }
+}
+
+/* Smooth height animation via grid-template-rows (0fr -> 1fr). */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms ease;
+}
+
+.faq-item.open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.faq-answer-inner .bodyCopy {
+  max-width: 65ch;
+  padding-bottom: 2.25rem;
+  color: var(--base-600);
+}
+
+@media (max-width: 1024px) {
+  .faq-header {
+    padding-top: 9rem;
+  }
+
+  .faq-list {
+    padding-bottom: 6.5rem;
+  }
+
+  .faq-question {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-header {
+    padding-top: 7rem;
+  }
+
+  .faq-list {
+    padding-bottom: 5rem;
+  }
+
+  .faq-question {
+    padding: 1.5rem 0;
+    gap: 1.25rem;
+  }
+
+  .faq-answer-inner .bodyCopy {
+    padding-bottom: 1.75rem;
+  }
+}

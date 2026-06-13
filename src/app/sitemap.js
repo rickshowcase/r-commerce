@@ -9,6 +9,7 @@ export default function sitemap() {
     { path: "/shop", priority: 0.9, changeFrequency: "weekly" },
     { path: "/lookbook", priority: 0.7, changeFrequency: "monthly" },
     { path: "/about", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.5, changeFrequency: "yearly" },
   ].map(({ path, priority, changeFrequency }) => ({
     url: `${SITE_URL}${path}`,
