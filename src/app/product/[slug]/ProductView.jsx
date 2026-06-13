@@ -147,7 +147,7 @@ export default function ProductView({ slug }) {
               </div>
             </div>
             <div className="product-meta-buttons">
-              <button className="primary" onClick={() => addToCart({ ...product, selectedColor, selectedSize })}>Add To Cart</button>
+              <button className="primary" onClick={() => addToCart({ ...product, selectedColor, selectedSize }, "product_detail")}>Add To Cart</button>
               <button className="secondary">Save Item</button>
             </div>
           </div>
@@ -204,6 +204,7 @@ export default function ProductView({ slug }) {
                   product={related}
                   productIndex={products.indexOf(related) + 1}
                   showAddToCart={true}
+                  source="related_products"
                 />
               ))}
             </div>

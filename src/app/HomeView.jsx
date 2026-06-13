@@ -144,6 +144,7 @@ export default function HomeView() {
                 product={product}
                 productIndex={products.indexOf(product) + 1}
                 showAddToCart={true}
+                source="home_featured"
               />
             ))}
           </div>

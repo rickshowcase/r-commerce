@@ -1,12 +1,16 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
+import { trackAddToCart, trackRemoveFromCart } from "@/lib/analytics";
+
 export const useCartStore = create(
   persist(
-    (set) => ({
+    (set, get) => ({
       cartItems: [],
 
-      addToCart: (product) => {
+      // `source` identifies which page/button triggered the add (analytics only;
+      // it is not stored on the cart item).
+      addToCart: (product, source) => {
         const cartId = `${product.slug}-${product.selectedColor || ""}-${product.selectedSize || ""}`;
         set((state) => {
           const existingItem = state.cartItems.find((item) => item.cartId === cartId);
@@ -23,11 +27,15 @@ export const useCartStore = create(
             cartItems: [...state.cartItems, { ...product, cartId, quantity: 1 }],
           };
         });
+        trackAddToCart(product, source);
       },
 
       removeFromCart: (cartId) => {
+        // Capture the line before removing so the event reports its full quantity.
+        const item = get().cartItems.find((i) => i.cartId === cartId);
+        if (item) trackRemoveFromCart(item);
         set((state) => ({
-          cartItems: state.cartItems.filter((item) => item.cartId !== cartId),
+          cartItems: state.cartItems.filter((i) => i.cartId !== cartId),
         }));
       },
     }),

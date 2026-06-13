@@ -90,6 +90,7 @@ export default function ShopView() {
               product={product}
               productIndex={products.indexOf(product) + 1}
               showAddToCart={true}
+              source="shop"
               innerRef={(el) => (productRefs.current[index] = el)}
               style={{ opacity: 0, transform: "scale(0.5)" }}
             />

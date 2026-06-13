@@ -11,6 +11,7 @@ const Product = ({
   className = "",
   innerRef,
   style,
+  source = "product_card",
 }) => {
   const addToCart = useCartStore((state) => state.addToCart);
 
@@ -28,7 +29,10 @@ const Product = ({
           <button
             className="add-to-cart-btn"
             onClick={() =>
-              addToCart({ ...product, selectedColor: "Stone", selectedSize: "M" })
+              addToCart(
+                { ...product, selectedColor: "Stone", selectedSize: "M" },
+                source
+              )
             }
           >
             Add to Cart
