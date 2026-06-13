@@ -63,7 +63,7 @@ export default async function Page({ params }) {
     offers: {
       "@type": "Offer",
       price: product.price,
-      priceCurrency: "USD",
+      priceCurrency: "CAD",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       url: `${SITE_URL}/product/${product.slug}`,

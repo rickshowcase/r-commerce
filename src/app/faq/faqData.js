@@ -5,8 +5,8 @@
 // structured data in sync (Google requires them to match) and avoids shipping
 // the same content twice.
 //
-// NOTE: shipping, returns and payment details below are sensible general
-// defaults — update them to match R Commerce's actual policies.
+// NOTE: R Commerce is a display/showcase site with no live storefront, so the
+// shipping, returns and payment details below are intentional fictional copy.
 export const faqs = [
   {
     question: "How long does shipping take?",

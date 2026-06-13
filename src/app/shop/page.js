@@ -37,7 +37,7 @@ export default function Page() {
           offers: {
             "@type": "Offer",
             price: product.price,
-            priceCurrency: "USD",
+            priceCurrency: "CAD",
             availability: "https://schema.org/InStock",
           },
         },
